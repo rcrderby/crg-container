@@ -27,6 +27,10 @@ rules:
   document-start:
     level: warning
     present: true
+  # Extend the maximum line length
+  line-length:
+    level: warning
+    max: 120
   # Disallow the use of trailing spaces
   trailing-spaces: enable
   # Allow the use of 'on' in GitHub Actions
