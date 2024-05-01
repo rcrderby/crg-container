@@ -8,7 +8,6 @@
 ## ./scoreboard.sh
 
 ---
-version: "3.8"
 services:
   # CRG application definition
   crg:
