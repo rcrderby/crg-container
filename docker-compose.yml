@@ -1,0 +1,54 @@
+# Docker Compose file to run the CRG scoreboard application
+## https://docs.docker.com/compose/compose-file/compose-file-v3
+
+# Derived from:
+## docker run --rm --name crg -itdv ~/code/personal/crg:/crg -p 8000:8000 openjdk
+## docker exec -it crg /bin/bash
+## cd /crg/crg-scoreboard_v2023.4
+## ./scoreboard.sh
+
+---
+version: "3.8"
+services:
+  # CRG application definition
+  crg:
+    # Specify build parameters
+    build:
+      # Set build arguments from environment variables
+      args:
+        - CRG_SOURCE_DIR=${CRG_SOURCE_DIR}
+        - CRG_SOURCE_VOLUME=${CRG_SOURCE_VOLUME}
+        - CRG_MOUNT_DIR=${CRG_MOUNT_DIR}
+      # Set path to Dockerfile and Dockerfile name
+      context: ./
+      dockerfile: Dockerfile
+    # Command to start CRG
+    command: ["/bin/bash", "-c", "./scoreboard.sh"]
+    # Set a container restart policy to recover from a container failure
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 60s
+    # Read environment variables
+    env_file:
+      - .env
+    # Check the status of the web application
+    healthcheck:
+      test: ["CMD", "curl", "-fIs", "http://crg:8000"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    # Publish host TCP port 8000
+    ports:
+      - target: 8000
+        published: 8000
+        protocol: tcp
+        mode: host
+    # Mount the local CRG volume
+    volumes:
+      - type: bind
+        source: ${CRG_SOURCE_VOLUME}/${CRG_SOURCE_DIR}
+        target: /${CRG_MOUNT_DIR}
