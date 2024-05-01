@@ -9,8 +9,8 @@ LABEL author-legal-name="Timothy Hull"
 LABEL version="1.0"
 
 # Install updates
-RUN microdnf upgrade -y --nodocs
-RUN microdnf clean all
+RUN microdnf upgrade -y --nodocs && \
+    microdnf clean all
 
 # Set build arguments
 ARG CRG_MOUNT_DIR=/${CRG_MOUNT_DIR}
