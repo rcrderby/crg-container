@@ -1,4 +1,4 @@
-# Dockerfile for CRG
+# Dockerfile for CRG Container
 
 # Base image
 FROM openjdk:latest
