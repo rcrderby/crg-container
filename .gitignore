@@ -1,7 +1,8 @@
 # macOS Spotlight Index
 .DS_Store
 
-# Excel files
+# Statsbook files
+_statsbook-files
 *.xlsx
 *.xls
 
