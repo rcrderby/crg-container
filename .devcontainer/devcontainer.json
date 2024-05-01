@@ -2,7 +2,7 @@
 // https://code.visualstudio.com/docs/remote/devcontainerjson-reference
 {
     // Docker build instructions
-    "name": "crg",
+    "name": "crg-container",
     "build": {
         "dockerfile": "../Dockerfile.dev",
         "context": ".."
