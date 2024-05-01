@@ -4,13 +4,13 @@
 FROM openjdk:latest
 
 # Metadata
-LABEL author_derby_name="Breadpool"
-LABEL author_legal_name="Timothy Hull"
+LABEL author-derby-name="Breadpool"
+LABEL author-legal-name="Timothy Hull"
 LABEL version="1.0"
 
 # Install updates
-RUN microdnf upgrade -y --nodocs
-RUN microdnf clean all
+RUN microdnf upgrade -y --nodocs && \
+    microdnf clean all
 
 # Set build arguments
 ARG CRG_MOUNT_DIR=/${CRG_MOUNT_DIR}
