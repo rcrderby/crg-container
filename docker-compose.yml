@@ -34,6 +34,8 @@ services:
     env_file:
       - .env
     # Check the status of the web application
+    ## Monitor results with the following command
+    ## docker inspect --format "{{json .State.Health }}" crg-container-crg-container-1 | jq
     healthcheck:
       test: ["CMD", "curl", "-fIs", "http://crg-container:8000"]
       interval: 30s
