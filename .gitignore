@@ -1,3 +1,7 @@
+# Excel files
+*.xlsx
+*.xls
+
 # CRG files
 crg-scoreboard_*
 
