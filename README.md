@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository provides a mechanism to run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository"){:target=_blank} application for Roller Derby in a Docker Container with Docker Compose.  Why run CRG in a Docker Container?
+This repository provides a mechanism to run the <a href="https://github.com/rollerderby/scoreboard" title="CRG ScoreBoard Git Repository" target="_blank">CRG ScoreBoard</a> application for Roller Derby in a Docker Container with Docker Compose.  Why run CRG in a Docker Container?
 
 - Simplicity
 - Portability
