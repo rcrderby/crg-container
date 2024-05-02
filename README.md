@@ -20,8 +20,8 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 ## Instructions
 
-1. Download a extract a [CRG ScoreBoard release](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
-2. Install Docker Desktop.
+1. Download and extract a [CRG ScoreBoard release](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases"):
+2. Install Docker Desktop:
 
     <details>
     <summary>Docker Desktop System Requirements</summary>
@@ -32,7 +32,25 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
     </details>
 
-3. Validate your Docker runtime.
+3. Check the status of your Docker runtime:
+
+    <details>
+    <summary>Docker Engine validation command input</summary>
+
+    ```shell
+    docker --version
+    ```
+
+    </details>
+    <details>
+    <summary>Docker Engine validation command sample output</summary>
+
+    ```text
+    Docker version 26.0.0, build 2ae903e
+    ```
+
+    </details>
+
 4. Set up environment variables.
 5. Run Docker Compose
 
