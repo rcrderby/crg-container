@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository provides a mechanism to run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container with Docker Compose.  Why run CRG in a Docker Container?
+This repository provides a mechanism to easily run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container, using Docker Compose to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
 
 - Simplicity
 - Portability
@@ -160,7 +160,15 @@ GUI="--gui"
 
 ---
 
-8. Stop CRG
+8. Run the CRG application:
+
+    - Open a [recommended web browser application](https://github.com/rollerderby/scoreboard#web-browser "CRG ScoreBoard Documentation Browser Recommendation").
+    - Navigate to [http://localhost:8000](http://localhost:8000 "CRG Application Launch Page").
+    - Run the CRG application in accordance with the [CRG ScoreBoard documentation](https://github.com/rollerderby/scoreboard/wiki "CRG ScoreBoard Documentation").
+
+---
+
+9. Stop CRG
 
     - Press `Ctrl+C` to stop CRG.
 
@@ -173,7 +181,7 @@ GUI="--gui"
         ```
 ---
 
-9. Review health check logs (optional):
+10. Review health check logs (optional):
 
 The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml` file](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/docker-compose.yml#L39-L44 "Docker Compose Health Check").
 
@@ -200,11 +208,13 @@ docker inspect -f "{{ json .State.Health }}" crg-container-crg-container-1
 
 ## FAQ
 
-TODO
+- Accessing the CRG container over a network connection.
+- TODO
 
 ## Development
 
-- Visual Studio Code Development Container
+- Visual Studio Code Development Container.
+- TODO
 
 ## References
 
