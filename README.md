@@ -69,11 +69,11 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 ---
 
-5. Modify the default environment variables file ([.env.default](https://github.com/timothyhull/crg-container/blob/main/.env.default "Default Environment Variables File")) within the cloned `crg-container` folder (optional):
+5. If necessary, you may overwrite the default environment variables file ([.env.default](https://github.com/timothyhull/crg-container/blob/main/.env.default "Default Environment Variables File")) within the cloned `crg-container` folder:
 
 - <details>
     <summary>
-      Default environment variables and values:
+      Option 1 - Use default environment variables and values (no action required):
     </summary>
 
     ```shell
@@ -90,20 +90,35 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
     CRG_MOUNT_DIR=crg-container
     ```
 
-- Alternatively, create a separate environment variable file and set `ENV_FILE` to the path:
+  </details>
 
-  ```shell
-  # Environment variable file template
-  CRG_SOURCE_VOLUME=
-  CRG_SOURCE_DIR=
-  CRG_MOUNT_DIR=
-  ```
+- <details>
+    <summary>
+      Option 2 - Use a custom environment variable file:
+    </summary>
 
-- Export the name of the new environment variables file:
+  1. Create a file at the root of the cloned crg-container repository named `.env`.
 
-  ```shell
-  export ENV_FILE=<path_to_your_.env_file>
-  ```
+  2. Customize the `.env` file with the following template.
+
+    ```shell
+    # Environment variable file template
+    CRG_SOURCE_VOLUME=
+    CRG_SOURCE_DIR=
+    CRG_MOUNT_DIR=
+    ```
+
+  3. Create an environment variable named `ENV_FILE` and set the value to the path to the `.env` file:
+
+    ```shell
+    # macOS and Linux example syntax
+    export ENV_FILE=.env
+    ```
+
+    ```powershell
+    # Windows PowerShell example syntax
+    $env:ENV_FILE = '.env'
+    ```
 
   </details>
 
