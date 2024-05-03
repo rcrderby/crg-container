@@ -8,14 +8,21 @@
 
 This repository provides a mechanism to easily run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container, using Docker Compose to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
 
-- Simplicity
-- Portability
-- Predictability
+- Simplicity:
+  - Docker Compose automates the:
+    - Build of the CRG Container Image.
+    - Deployment of the CRG Container.
+    - Launch of the CRG application.
+- Portability:
+  - A Docker Container will consistently and predictably run within a Docker runtime on any Host Operating System (OS) (Windows, macOS, Linux, etc.).
+- Security:
+  - There's no need to install a Java Runtime Environment (JRE) on your computer.
+  - The JRE instance that runs CRG exists in an isolated, ephemeral Docker Container.
 
 ## Components
 
-1. [`Dockerfile`](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/Dockerfile "Dockerfile") to create a Docker Image with a Java Runtime Environment (JRE).
-2. [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker container.
+1. [`Dockerfile`](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/Dockerfile "Dockerfile") to create a Docker Image with a JRE.
+2. [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker Container.
 
 ## Requirements
 
