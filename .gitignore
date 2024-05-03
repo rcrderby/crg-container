@@ -2,12 +2,13 @@
 .DS_Store
 
 # Statsbook files
-_statsbook-files
+_statsbook-files/
 *.xlsx
 *.xls
 
 # CRG files
-crg-scoreboard_*
+crg-scoreboard_*/
+crg-*.zip
 
 # Compressed files/archives
 .zip
@@ -17,7 +18,7 @@ _archive/
 .DS_Store
 
 # _gitignore folder
-_gitignore
+_gitignore/
 
 # Byte-compiled / optimized / DLL files
 __pycache__
