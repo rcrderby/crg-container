@@ -11,6 +11,7 @@ crg-scoreboard_*
 
 # Compressed files/archives
 .zip
+_archive/
 
 # macOS Spotlight Index
 .DS_Store
