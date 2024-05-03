@@ -6,15 +6,11 @@
 
 ## Overview
 
-This repository provides a mechanism to easily run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container, using Docker Compose to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
+This repository provides a mechanism to run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container, using Docker Compose to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
 
 - Simplicity:
-  - Docker Compose automates the:
-    - Build of the CRG Container Image.
-    - Deployment of the CRG Container.
-    - Launch of the CRG application.
-- Portability:
-  - A Docker Container will consistently and predictably run within a Docker runtime on any Host Operating System (OS) (Windows, macOS, Linux, etc.).
+  - Set up 
+  - Build, deploy, and run CRG with the same single command on any Windows, macOS, or Linux computer with Docker installed.
 - Security:
   - There's no need to install a Java Runtime Environment (JRE) on your computer.
   - The JRE instance that runs CRG exists in an isolated, ephemeral Docker Container.
@@ -30,7 +26,7 @@ This repository provides a mechanism to easily run the [CRG ScoreBoard](https://
 2. Installation of [Docker Desktop](https://www.docker.com/products/docker-desktop "Download Docker Desktop").
 3. Release of [CRG ScoreBoard](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
 
-## Instructions
+## Setup Instructions
 
 1. Download and extract a [CRG ScoreBoard release](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
 
@@ -119,9 +115,9 @@ GUI="--gui"
 # GUI="--gui"
 ```
 
----
+## Run Instructions
 
-7. Run CRG with Docker Compose:
+1. Run CRG with Docker Compose:
 
     ```shell
     # Docker Compose command input
@@ -167,7 +163,49 @@ GUI="--gui"
 
 ---
 
-8. Run the CRG application:
+4. Review health check logs (optional):
+
+- <details>
+  <summary>Overview</summary>
+
+  The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml` file](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/docker-compose.yml#L39-L44 "Docker Compose Health Check").
+
+  </details>
+
+- <details>
+  <summary>Health Check Command Input:</summary>
+
+  ```shell
+  # Check the health of the most recently-created container
+  docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
+  ```
+
+  </details>
+
+- <details>
+  <summary>Successful Health Check Command Output Example:</summary>
+
+  ```jsonc
+  // Successful health check command example output (formatted as JSON with JQ)
+  {
+    "Status": "healthy",
+    "FailingStreak": 0,
+    "Log": [
+      {
+        "Start": "2024-05-03T12:00:00.000000000Z",
+        "End": "2024-05-03T12:00:00.000000000",
+        "ExitCode": 0,
+        "Output": "HTTP/1.1 200 OK\r\nDate: Fri, 03 May 2024 01:50:54 GMT\r\nSet-Cookie: CRG_SCOREBOARD=node0v5ap3t21va5cq5zx2cqaekfe36.node0; Path=/; Expires=Sat, 18-May-2024 12:00:00 GMT; Max-Age=1296000; HttpOnly; SameSite=Lax\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\nLast-Modified: Tue, 03 Oct 2023 00:56:04 GMT\r\nContent-Type: text/html;charset=utf-8\r\nAccept-Ranges: bytes\r\n"
+      }
+    ]
+  }
+  ```
+
+  </details>
+
+---
+
+3. Run the CRG application:
 
     - Open a [recommended web browser application](https://github.com/rollerderby/scoreboard#web-browser "CRG ScoreBoard Documentation Browser Recommendation").
     - Navigate to [http://localhost:8000](http://localhost:8000 "CRG Application Launch Page").
@@ -175,7 +213,7 @@ GUI="--gui"
 
 ---
 
-9. Stop CRG
+4. Stop the CRG application:
 
     - Press `Ctrl+C` to stop CRG.
 
@@ -186,32 +224,6 @@ GUI="--gui"
         ✔ Container crg-container-crg-container-1  Stopped                                                                     0.5s 
         canceled
         ```
----
-
-10. Review health check logs (optional):
-
-The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml` file](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/docker-compose.yml#L39-L44 "Docker Compose Health Check").
-
-```shell
-# Check the health of the CRG container
-docker inspect -f "{{ json .State.Health }}" crg-container-crg-container-1
-```
-
-```jsonc
-// Successful health check command sample output
-{
-  "Status": "healthy",
-  "FailingStreak": 0,
-  "Log": [
-    {
-      "Start": "2024-05-03T12:00:00.000000000Z",
-      "End": "2024-05-03T12:00:00.000000000",
-      "ExitCode": 0,
-      "Output": "HTTP/1.1 200 OK\r\nDate: Fri, 03 May 2024 01:50:54 GMT\r\nSet-Cookie: CRG_SCOREBOARD=node0v5ap3t21va5cq5zx2cqaekfe36.node0; Path=/; Expires=Sat, 18-May-2024 12:00:00 GMT; Max-Age=1296000; HttpOnly; SameSite=Lax\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\nLast-Modified: Tue, 03 Oct 2023 00:56:04 GMT\r\nContent-Type: text/html;charset=utf-8\r\nAccept-Ranges: bytes\r\n"
-    }
-  ]
-}
-```
 
 ## FAQ
 
