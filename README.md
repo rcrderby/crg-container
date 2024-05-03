@@ -17,8 +17,8 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 ## Components
 
-1. [`Dockerfile`](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/Dockerfile "Dockerfile") to create a Docker Image with a JRE.
-2. [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker Container.
+1. [`Dockerfile`](https://github.com/timothyhull/crg-container/blob/main/Dockerfile "Dockerfile") to create a Docker Image with a JRE.
+2. [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/main/docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker Container.
 
 ## Requirements
 
@@ -69,7 +69,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 ---
 
-5. Create an environment variables file within the cloned `crg-container` folder:
+5. Modify the [default environment variables file] within the cloned `crg-container` folder (optional):
 
     - macOS/Linux Terminal:
 
@@ -172,7 +172,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 - <details>
   <summary>Overview</summary>
 
-  The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml` file](https://github.com/timothyhull/crg-container/blob/timothyhull/Update-%60READMEmd%60/docker-compose.yml#L39-L44 "Docker Compose Health Check").
+  The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml` file](https://github.com/timothyhull/crg-container/blob/main/docker-compose.yml "Docker Compose Health Check").
 
   </details>
 
