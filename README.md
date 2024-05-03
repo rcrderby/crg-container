@@ -69,35 +69,43 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 ---
 
-5. Modify the [default environment variables file] within the cloned `crg-container` folder (optional):
+5. Modify the default environment variables file ([.env.default](https://github.com/timothyhull/crg-container/blob/main/.env.default "Default Environment Variables File")) within the cloned `crg-container` folder (optional):
 
-    - macOS/Linux Terminal:
+- <details>
+    <summary>
+      Default environment variables and values:
+    </summary>
 
-        ```shell
-        # Create an environment variables file
-        touch .env
-        ```
+    ```shell
+    # Local path to the 'crg-container' folder extracted from this repo
+    ## Default value is the current working directory
+    CRG_SOURCE_VOLUME=.
 
-        ```shell
-        # Add environment variables to file
-        echo CRG_MOUNT_DIR=crg-container >> .env
-        echo CRG_SOURCE_DIR=crg-scoreboard_v2023.4 >> .env
-        echo CRG_SOURCE_VOLUME=~/code/personal/crg-container >> .env
-        ```
+    # Local path relative to CRG_SOURCE_VOLUMEfor the extracted CRG application from the CRG ScoreBoard Git Repository
+    ## Default value is CRG version 2023.4
+    CRG_SOURCE_DIR=crg-scoreboard_v2023.4
 
-    - Windows PowerShell:
+    # Name of the folder to create and mount files to on the CRG container instance
+    ## Default value is 'crg-container'
+    CRG_MOUNT_DIR=crg-container
+    ```
 
-        ```powershell
-        # Create an environment variables file
-        New-Item -Name ".env" -ItemType File
-        ```
+- Alternatively, create a separate environment variable file and set `ENV_FILE` to the path:
 
-        ```powershell
-        # Add environment variables to file
-        Add-Content -Path ".env" "CRG_MOUNT_DIR=crg-container"
-        Add-Content -Path ".env" "CRG_SOURCE_DIR=crg-scoreboard_v2023.4"
-        Add-Content -Path ".env" "CRG_SOURCE_VOLUME=~/code/personal/crg-container"
-        ```
+  ```shell
+  # Environment variable file template
+  CRG_SOURCE_VOLUME=
+  CRG_SOURCE_DIR=
+  CRG_MOUNT_DIR=
+  ```
+
+- Export the name of the new environment variables file:
+
+  ```shell
+  export ENV_FILE=<path_to_your_.env_file>
+  ```
+
+  </details>
 
 ---
 
