@@ -30,12 +30,14 @@ services:
         delay: 5s
         max_attempts: 3
         window: 60s
-    # Read environment variables
+    # Read environment variables from a .env file or the .env.default file stored in the repo
     env_file:
-      - .env
+      - ${ENV_FILE:-.env.default}
     # Check the status of the web application
+    ## curl -fIs http://crg-container:8000
     ## Monitor results with the following command
-    ## docker inspect --format "{{json .State.Health }}" crg-container-crg-container-1 | jq
+    ## docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
+    ## A response of "HTTP/1.1 200" is a successful health check
     healthcheck:
       test: ["CMD", "curl", "-fIs", "http://crg-container:8000"]
       interval: 30s
