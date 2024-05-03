@@ -182,7 +182,7 @@ The health check is a recurring `curl` HTTP request to the CRG web application s
 docker inspect -f "{{ json .State.Health }}" crg-container-crg-container-1
 ```
 
-```json
+```jsonc
 // Successful health check command sample output
 {
   "Status": "healthy",
