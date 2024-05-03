@@ -9,10 +9,10 @@
 This repository provides a mechanism to run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container, using Docker Compose to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
 
 - Simplicity:
-  - Set up 
-  - Build, deploy, and run CRG with the same single command on any Windows, macOS, or Linux computer with Docker installed.
+  - Follow one-time [setup instructions](#setup-instructions "Setup Instructions") and then easily start and stop CRG.
+  - Build, deploy, and run CRG with the same [single command](#run-instructions "Run Instructions") on any Windows, macOS, or Linux computer with Docker installed.
 - Security:
-  - There's no need to install a Java Runtime Environment (JRE) on your computer.
+  - There is no need to install a Java Runtime Environment (JRE) on your computer.
   - The JRE instance that runs CRG exists in an isolated, ephemeral Docker Container.
 
 ## Components
