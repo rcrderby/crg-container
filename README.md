@@ -105,15 +105,15 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 - The [`scoreboard.sh` file](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh#L5 "scoreboard.sh Source File") resides at the root of the extracted CRG application directory.
 
-```shell
-# Add a '# ' prefix to the following line in scoreboard.sh
-GUI="--gui"
-```
+  ```shell
+  # Add a '# ' prefix to the following line in scoreboard.sh
+  GUI="--gui"
+  ```
 
-```shell
-# Example of a disabled CRG GUI
-# GUI="--gui"
-```
+  ```shell
+  # Example of a disabled CRG GUI
+  # GUI="--gui"
+  ```
 
 ## Run Instructions
 
@@ -124,9 +124,11 @@ GUI="--gui"
     docker compose up
     ```
 
-    ```shell
-    # Successful Docker Compose command sample output
-        [+] Building 56.1s (7/7) FINISHED                                                                       docker:desktop-linux
+- <details>
+  <summary>Successful Docker Compose Command Sample Output:</summary>
+
+  ```shell
+  [+] Building 56.1s (7/7) FINISHED                                                                       docker:desktop-linux
     => [crg-container internal] load build definition from Dockerfile                                                      0.0s
     => => transferring dockerfile: 512B                                                                                    0.0s
     => [crg-container internal] load metadata for docker.io/library/openjdk:latest                                         0.0s
@@ -158,8 +160,10 @@ GUI="--gui"
     crg-container-1  | http://[fe80:0:0:0:42:acff:fe13:2%eth0]:8000/
     crg-container-1  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     crg-container-1  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    crg-container-1  | 
-    ```
+    crg-container-1  |
+  ```
+
+  </details>
 
 ---
 
@@ -183,7 +187,9 @@ GUI="--gui"
   </details>
 
 - <details>
-  <summary>Successful Health Check Command Output Example:</summary>
+    <summary>
+      Successful Health Check Command Output Example:
+    </summary>
 
   ```jsonc
   // Successful health check command example output (formatted as JSON with JQ)
@@ -216,14 +222,19 @@ GUI="--gui"
 4. Stop the CRG application:
 
     - Press `Ctrl+C` to stop CRG.
+    - <details>
+        <summary>
+          Successful Docker Compose command sample output:
+        </summary>
 
         ```shell
-        # Successful Docker Compose command sample output
         Gracefully stopping... (press Ctrl+C again to force)
         [+] Stopping 1/1
         ✔ Container crg-container-crg-container-1  Stopped                                                                     0.5s 
         canceled
         ```
+
+      </details>
 
 ## FAQ
 
