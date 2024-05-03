@@ -12,13 +12,8 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
   - Follow one-time [setup instructions](#setup-instructions "Setup Instructions") and then easily start and stop CRG.
   - Build, deploy, and run CRG with the same [single command](#run-instructions "Run Instructions") on any Windows, macOS, or Linux computer with Docker installed.
 - Security:
-  - There is no need to install a Java Runtime Environment (JRE) on your computer.
+  - There is no need to install a JRE[^1] on your computer.
   - The JRE instance that runs CRG exists in an isolated, ephemeral Docker Container.
-
-## Components
-
-1. [`Dockerfile`](https://github.com/timothyhull/crg-container/blob/main/Dockerfile "Dockerfile") to create a Docker Image with a JRE.
-2. [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/main/docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker Container.
 
 ## Requirements
 
@@ -43,15 +38,28 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 3. Check the status of your Docker runtime:
 
+- <details>
+    <summary>
+      Docker Engine command input:
+    </summary>
+
     ```shell
-    # Docker Engine command input
     docker --version
     ```
 
+  </details>
+
+- <details>
+    <summary>
+      Successful Docker Engine example response output:
+    </summary>
+
+
     ```shell
-    # Successful Docker Engine example response output
     Docker version 26.0.0, build 2ae903e
     ```
+
+</details>
 
 ---
 
@@ -264,6 +272,11 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 - Accessing the CRG container over a network connection.
 - TODO
 
+## Docker Components
+
+1. [`Dockerfile`](https://github.com/timothyhull/crg-container/blob/main/Dockerfile "Dockerfile") to create a Docker Image with a JRE[^1].
+2. [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/main/docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker Container.
+
 ## Development
 
 - Visual Studio Code Development Container.
@@ -273,3 +286,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 - [CRG ScoreBoard Git Repository](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository")
 - [Docker Compose documentation](https://docs.docker.com/compose "Docker Compose Documentation")
+
+
+---
+[^1]: JRE: Java Runtime Environment
