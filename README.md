@@ -6,55 +6,55 @@
 
 ## Overview
 
-This repository provides a mechanism to run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container, using Docker Compose to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
+This repository provides a mechanism to run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container [^1], using Docker Compose [^2] to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
 
 - Simplicity:
-  - Follow one-time [setup instructions](#setup-instructions "Setup Instructions") and then easily start and stop CRG.
+  - Follow one-time [setup instructions](#setup-instructions "Setup Instructions") and then easily launch CRG.
   - Build, deploy, and run CRG with the same [single command](#run-instructions "Run Instructions") on any Windows, macOS, or Linux computer with Docker installed.
 - Security:
-  - There is no need to install a JRE[^1] on your computer.
+  - There is no need to install a JRE [^3] on your computer.
   - The JRE instance that runs CRG exists in an isolated, ephemeral Docker Container.
 
 ## Requirements
 
 1. Computer running Windows, macOS, or Linux.
-2. Installation of [Docker Desktop](https://www.docker.com/products/docker-desktop "Download Docker Desktop").
-3. Release of [CRG ScoreBoard](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
+2. Installation of [Docker Desktop](https://docs.docker.com/desktop "Docker Desktop Overview").
+3. Downloaded release of [CRG ScoreBoard](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
+4. Downloaded release of this repository ([crg-container](https://github.com/timothyhull/crg-container/releases "crg-container Releases")).
 
 ## Setup Instructions
 
-### 1. Download and Extract a [CRG ScoreBoard Release](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases")
+### 1. Download and Install Docker Desktop
 
-- TODO
+1. Navigate to the [Docker Desktop](https://www.docker.com/products/docker-desktop "Download Docker Desktop") downloads page.
+2. Download the appropriate Docker Desktop release for your OS [^4].
+3. Follow the OS-specific instructions to install Docker Desktop on your computer:
 
-### 2. Download and Install [Docker Desktop](https://docs.docker.com/desktop "Docker Desktop Installation")
+    - [Windows](https://docs.docker.com/desktop/install/windows-install "Docker Desktop for Windows Installation Guide")
+    - [macOS](https://docs.docker.com/desktop/install/mac-install "Docker Desktop for macOS Installation Guide")
+    - [Linux](https://docs.docker.com/desktop/install/linux-install "Docker Desktop for Linux Installation Guide")  
 
-- TODO
-- System requirements:
-  - [Windows](https://docs.docker.com/desktop/install/windows-install "Docker Desktop for Windows System Requirements")
-  - [macOS](https://docs.docker.com/desktop/install/mac-install "Docker Desktop for macOS System Requirements")
-  - [Linux](https://docs.docker.com/desktop/install/linux-install "Docker Desktop for Linux System Requirements")
+### 2. Check The Status of Your Docker Runtime
 
-### 3. Check The Status of Your Docker Runtime
+After installing Docker Desktop, verify the Docker Engine is available
 
-TODO
+1. Open Windows PowerShell or a macOS/Linux Terminal window.
+
+    <details>
+      <summary>
+        Enter this command to confirm the Docker Engine is active:
+      </summary>
+
+      ```shell
+      docker --version
+      ```
+
+  </details>
 
 <details>
   <summary>
-    Docker Engine command input:
+    Confirm the response from the Docker Engine looks something like this:
   </summary>
-
-  ```shell
-  docker --version
-  ```
-
-</details>
-
-<details>
-  <summary>
-    Successful Docker Engine example response output:
-  </summary>
-
 
   ```shell
   Docker version 26.0.0, build 2ae903e
@@ -62,7 +62,7 @@ TODO
 
 </details>
 
-### 4. Clone the CRG Container Git Repository
+### 3. Clone the CRG Container Git Repository
 
 <details>
   <summary>
@@ -85,6 +85,11 @@ TODO
   ```
 
 </details>
+
+### 4. Download and Extract a Release of CRG Scoreboard
+
+- Navigate to the [CRG ScoreBoard Releases page](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
+
 
 ### 5. Check Environment Variables
 
@@ -317,4 +322,7 @@ canceled
 - [Docker Compose documentation](https://docs.docker.com/compose "Docker Compose Documentation")
 
 ---
-[^1]: JRE: Java Runtime Environment
+[^1]: [What is a Docker Container?](https://www.docker.com/resources/what-container "What is a Docker Container?")
+[^2]: [Docker Compose Overview](https://docs.docker.com/compose "Docker Compose Overview")
+[^3]: JRE: Java Runtime Environment
+[^4]: OS: Operating System
