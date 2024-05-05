@@ -123,7 +123,7 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 │   ├── Dockerfile.dev
 │   ├── LICENSE
 │   ├── README.md
-│   ├── ==crg-scoreboard_v2023.5==
+│   ├── crg-scoreboard_v2023.5
 │   ├── crg-scoreboard_v2023.5.zip
 │   ├── docker-compose.yml
 │   ├── requirements
