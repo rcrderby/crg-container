@@ -339,6 +339,8 @@ Gracefully stopping... (press Ctrl+C again to force)
 canceled
 ```
 
+TODO: `docker compose down`
+
 </details>
 
 ## FAQ
