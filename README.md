@@ -19,8 +19,8 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 1. Computer running Windows, macOS, or Linux.
 2. Installation of [Docker Desktop](https://docs.docker.com/desktop "Docker Desktop Overview").
-3. Downloaded release of [CRG ScoreBoard](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
-4. Downloaded release of this repository ([crg-container](https://github.com/timothyhull/crg-container/releases "crg-container Releases")).
+3. Downloaded release of the [crg-container](https://github.com/timothyhull/crg-container/releases "crg-container Releases") repository.
+4. Downloaded release of [CRG ScoreBoard](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
 
 ## Setup Instructions
 
@@ -36,20 +36,18 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 ### 2. Check The Status of Your Docker Runtime
 
-After installing Docker Desktop, verify the Docker Engine is available
+After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Terminal window to verify the Docker Engine is available.
 
-1. Open Windows PowerShell or a macOS/Linux Terminal window.
+<details>
+  <summary>
+    Enter this command to confirm the Docker Engine is active:
+  </summary>
 
-    <details>
-      <summary>
-        Enter this command to confirm the Docker Engine is active:
-      </summary>
+  ```shell
+  docker --version
+  ```
 
-      ```shell
-      docker --version
-      ```
-
-  </details>
+</details>
 
 <details>
   <summary>
@@ -62,33 +60,48 @@ After installing Docker Desktop, verify the Docker Engine is available
 
 </details>
 
-### 3. Clone the CRG Container Git Repository
+### 3. Download the the CRG Container Git Repository
 
 <details>
   <summary>
-    Git Clone command input:
+    Option 1 - Download and extract the latest <strong>crg-container</strong> release:
   </summary>
 
-  ```shell
-  git clone git@github.com:timothyhull/crg-container
-  ```
-
+1. Navigate to the [crg-container Releases](https://github.com/timothyhull/crg-container/releases "crg-container Releases") page.
+2. Locate the `Assets` section for the latest release and click on `Source code (zip)` or `Source code (tar.gz)` to download a compressed copy of the repository files.
+3. Extracted the compressed file.
+  
 </details>
 
 <details>
   <summary>
-    Git Clone response example output:
+    Option 2 - Clone the repository with Git:
   </summary>
 
   ```shell
-  # TODO
+  # Git Clone command input
+  git clone git@github.com:timothyhull/crg-container
+  ```
+
+  ```shell
+  # Git Clone response example output
+  Cloning into 'crg-container'...
+  remote: Enumerating objects: 234, done.
+  remote: Counting objects: 100% (234/234), done.
+  remote: Compressing objects: 100% (136/136), done.
+  remote: Total 234 (delta 116), reused 196 (delta 82), pack-reused 0
+  Receiving objects: 100% (234/234), 50.95 KiB | 815.00 KiB/s, done.
+  Resolving deltas: 100% (116/116), done.
   ```
 
 </details>
 
 ### 4. Download and Extract a Release of CRG Scoreboard
 
-- Navigate to the [CRG ScoreBoard Releases page](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
+1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
+2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_`.
+3. Move the downloaded `crg-scoreboard_*.zip` file to the extracted or cloned `crg-container` folder.
+4. Extract `crg-scoreboard_*.zip`.
 
 
 ### 5. Check Environment Variables
