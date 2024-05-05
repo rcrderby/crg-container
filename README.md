@@ -361,7 +361,6 @@ canceled
 - [CRG ScoreBoard Git Repository](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository")
 - [Docker Compose documentation](https://docs.docker.com/compose "Docker Compose Documentation")
 
----
 [^1]: [What is a Docker Container?](https://www.docker.com/resources/what-container "What is a Docker Container?")
 [^2]: [Docker Compose Overview](https://docs.docker.com/compose "Docker Compose Overview")
 [^3]: JRE: Java Runtime Environment
