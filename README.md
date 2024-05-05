@@ -103,6 +103,33 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 3. Move the downloaded `crg-scoreboard_*.zip` file to the extracted or cloned `crg-container` folder.
 4. Extract `crg-scoreboard_*.zip`.
 
+<details>
+  <summary>
+    Example directory structure after downloading and extracting <strong>crg-scoreboard_v2023.5.zip</strong> in the <strong>crg-container</strong> folder.
+  </summary>
+
+- Note the `crg-scoreboard_v2023.5` folder within the `crg-container` folder:
+
+```shell
+├── crg-container
+│   ├── .devcontainer
+│   ├── .dockerignore
+│   ├── .env.default
+│   ├── .git
+│   ├── .github
+│   ├── .gitignore
+│   ├── .vscode
+│   ├── Dockerfile
+│   ├── Dockerfile.dev
+│   ├── LICENSE
+│   ├── README.md
+│   ├── ==crg-scoreboard_v2023.5==
+│   ├── crg-scoreboard_v2023.5.zip
+│   ├── docker-compose.yml
+│   ├── requirements
+```
+
+</details>
 
 ### 5. Check Environment Variables
 
