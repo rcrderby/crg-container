@@ -114,7 +114,6 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 ├── crg-container
 │   ├── .devcontainer
 │   ├── .dockerignore
-│   ├── .env.default
 │   ├── .git
 │   ├── .github
 │   ├── .gitignore
@@ -131,60 +130,32 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 </details>
 
-### 5. Check Environment Variables
+### 5. Set Environment Variables
 
-If necessary, you may overwrite the default environment variables file ([.env.default](https://github.com/timothyhull/crg-container/blob/main/.env.default "Default Environment Variables File")) within the cloned `crg-container` folder.
+1. Create a file in the `crg-container` folder named `.env`.
+2. Open the `.env` file in a text editor.
+3. Copy the text in the following template, paste the text in the `.env` file, and save the changes:
 
-<details>
-  <summary>
-    Option 1 - Use default environment variables and values (no action required):
-  </summary>
-
-```shell
-# Local path to the 'crg-container' folder extracted from this repo
-## Default value is the current working directory
-CRG_SOURCE_VOLUME=.
-
-# Local path relative to CRG_SOURCE_VOLUMEfor the extracted CRG application from the CRG ScoreBoard Git Repository
-## Default value is CRG version 2023.4
-CRG_SOURCE_DIR=crg-scoreboard_v2023.4
-
-# Name of the folder to create and mount files to on the CRG container instance
-## Default value is 'crg-container'
-CRG_MOUNT_DIR=crg-container
-```
-
-</details>
-
-<details>
-  <summary>
-    Option 2 - Use a custom environment variable file:
-  </summary>
-
-1. Create a file at the root of the cloned crg-container repository named `.env`.
-
-2. Customize the `.env` file with the following template:
+    <details>
+      <summary>
+        Default environment variables template:
+      </summary>
 
     ```shell
-    # Environment variable file template
-    CRG_SOURCE_VOLUME=
-    CRG_SOURCE_DIR=
-    CRG_MOUNT_DIR=
+    # Local path to the 'crg-container' folder extracted from this repo
+    ## Default value is the current directory
+    CRG_SOURCE_VOLUME=.
+
+    # Local path relative to CRG_SOURCE_VOLUME for the extracted CRG application
+    ## Default value is CRG version 2023.4
+    CRG_SOURCE_DIR=crg-scoreboard_v2023.4
+
+    # Name of the folder to create and mount files to on the CRG container instance
+    ## Default value is 'crg-container'
+    CRG_MOUNT_DIR=crg-container
     ```
 
-3. Create an environment variable named `ENV_FILE` and set the value to the path to the `.env` file:
-
-    ```shell
-    # macOS and Linux example syntax
-    export ENV_FILE=.env
-    ```
-
-    ```powershell
-    # Windows PowerShell example syntax
-    $env:ENV_FILE = '.env'
-    ```
-
-</details>
+    </details>
 
 ### 6. Disable the CRG GUI Option in the `scoreboard.sh` CRG Launch Script
 
