@@ -34,6 +34,8 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
     - [macOS](https://docs.docker.com/desktop/install/mac-install "Docker Desktop for macOS Installation Guide")
     - [Linux](https://docs.docker.com/desktop/install/linux-install "Docker Desktop for Linux Installation Guide")  
 
+---
+
 ### 2. Check The Status of Your Docker Runtime
 
 After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Terminal window to verify the Docker Engine is available.
@@ -59,6 +61,8 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
   ```
 
 </details>
+
+---
 
 ### 3. Download the the CRG Container Git Repository
 
@@ -96,6 +100,8 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 </details>
 
+---
+
 ### 4. Download and Extract a Release of CRG Scoreboard
 
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
@@ -129,6 +135,8 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 ```
 
 </details>
+
+---
 
 ### 5. Set Environment Variables
 
@@ -262,6 +270,8 @@ docker compose up
 
 </details>
 
+---
+
 ### 2. Review CRG Container Health Check Status (optional)
 
 TODO: Check the status of the Docker Compose health check:
@@ -309,6 +319,8 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 ```
 
 </details>
+
+---
 
 ### 3. Access the CRG Web Application
 
