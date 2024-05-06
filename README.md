@@ -147,8 +147,8 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
     CRG_SOURCE_VOLUME=.
 
     # Local path relative to CRG_SOURCE_VOLUME for the extracted CRG application
-    ## Default value is CRG version 2023.4
-    CRG_SOURCE_DIR=crg-scoreboard_v2023.4
+    ## Default value is CRG version 2023.5
+    CRG_SOURCE_DIR=crg-scoreboard_v2023.5
 
     # Name of the folder to create and mount files to on the CRG container instance
     ## Default value is 'crg-container'
@@ -159,23 +159,47 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 ### 6. Disable the CRG GUI Option in the `scoreboard.sh` CRG Launch Script
 
-TODO: Necessary to allow CRG to run within a Docker Container.
+The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose:
+
+1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#4-download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
+2. Locate and open the file `scoreboard.sh` in any text editor application (Notepad, TextEdit, VIM, etc.).
+3. Adjust the  the line of text that reads `GUI="--gui"` as follows:
+
+    <details>
+      <summary>
+        Convert the line that sets the 'GUI' variable to a comment:
+      </summary>
+
+      ```shell
+      # Locate this line in scoreboard.sh
+      GUI="--gui"
+      ```
+
+      ```shell
+      # Add a '# ' prefix to this line so it reads
+      # GUI="--gui"
+      ```
+
+    </details>
+
+4. Save and close `scoreboard.sh`.
+
+#### :bangbang: Note - failure to complete this step will result in CRG producing the following error when Docker Compose starts CRG
 
 <details>
   <summary>
-    TODO: Comment the GUI line:
+  CRG Java GUI error example:
   </summary>
 
-- The [`scoreboard.sh` file](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh#L5 "scoreboard.sh Source File") resides at the root of the extracted CRG application directory.
-
   ```shell
-  # Add a '# ' prefix to the following line in scoreboard.sh
-  GUI="--gui"
-  ```
-
-  ```shell
-  # Example of a disabled CRG GUI
-  # GUI="--gui"
+  crg-container-1  | Exception in thread "main" java.lang.reflect.InvocationTargetException
+  crg-container-1  |  at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+  crg-container-1  |  at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+  crg-container-1  | Caused by: java.awt.HeadlessException: 
+  crg-container-1  | No X11 DISPLAY variable was set,
+  crg-container-1  | but this program performed an operation which requires it.
+  crg-container-1  |  at java.desktop/java.awt.GraphicsEnvironment.checkHeadless(GraphicsEnvironment.java:166)
+  crg-container-1  |  at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
   ```
 
 </details>
