@@ -165,6 +165,8 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
     </details>
 
+---
+
 ### 6. Disable the CRG GUI Option in the `scoreboard.sh` CRG Launch Script
 
 The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose:
