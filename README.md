@@ -81,10 +81,10 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 
 <details>
   <summary>
-    Option 2 - Clone the repository with Git [^5]:
+    Option 2 - Clone the repository with Git:
   </summary>
 
-1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.).
+1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git [^5] commands.
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder named `crg-container`.
 
@@ -130,7 +130,7 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
     Option 2 - Clone the repository with Git [^5]:
   </summary>
 
-1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.).
+1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git [^5] commands.
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder with the prefix `crg-scoreboard_`.
 
