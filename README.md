@@ -84,13 +84,23 @@ TODO
     Option 2 - Clone the repository with Git:
   </summary>
 
+  <details>
+    <summary>
+      Git Clone command input:
+    </summary>
+
   ```shell
-  # Git Clone command input
   git clone git@github.com:timothyhull/crg-container
   ```
 
+  </details>
+
+  <details>
+    <summary>
+    Git Clone response example output:
+    </summary>
+
   ```shell
-  # Git Clone response example output
   Cloning into 'crg-container'...
   remote: Enumerating objects: 234, done.
   remote: Counting objects: 100% (234/234), done.
@@ -99,6 +109,8 @@ TODO
   Receiving objects: 100% (234/234), 50.95 KiB | 815.00 KiB/s, done.
   Resolving deltas: 100% (116/116), done.
   ```
+
+  </details>
 
 </details>
 
