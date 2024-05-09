@@ -74,7 +74,7 @@ TODO
   </summary>
 
 1. Navigate to the [crg-container Releases](https://github.com/timothyhull/crg-container/releases "crg-container Releases") page.
-2. Locate the `Assets` section for the latest release and click on `Source code (zip)` or `Source code (tar.gz)` to download a compressed copy of the repository files.
+2. Locate the `Assets` section of the page to find the latest release and click on `Source code (zip)` or `Source code (tar.gz)` to download a compressed copy of the repository files.
 3. Extracted the compressed file.
   
 </details>
