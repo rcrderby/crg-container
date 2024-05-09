@@ -413,7 +413,7 @@ CRG should now be running in a Docker Container, and you may access the CRG inte
 
 ### Stop the CRG Application
 
-To stop the instance of CRG running in Docker Compose:
+You may stop the instance of CRG running in Docker Compose anytime, and your configuration and game data will persist.
 
 1. Press `Ctrl+C` to stop CRG.
 
