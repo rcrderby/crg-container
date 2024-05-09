@@ -458,8 +458,14 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 ## FAQ
 
-- Accessing the CRG container over a network connection.
-- TODO
+<details>
+  <summary>
+    How do I access the CRG container from another computer or tablet over a network?
+  </summary>
+
+- One nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container and the URL is not directly accessible from another device.
+
+</details>
 
 ## Docker Compose Components
 
