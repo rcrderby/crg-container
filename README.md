@@ -403,7 +403,7 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 
 ### Access the CRG Web Application
 
-TODO
+CRG should now be running in a Docker Container, and you may access the CRG interface with a web browser.
 
 1. Open a [recommended web browser application](https://github.com/rollerderby/scoreboard#web-browser "CRG ScoreBoard Documentation Browser Recommendation").
 2. Navigate to [http://localhost:8000](http://localhost:8000 "CRG Application Launch Page").
