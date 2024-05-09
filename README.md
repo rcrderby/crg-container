@@ -75,7 +75,7 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 
 1. Navigate to the [CRG Container Releases](https://github.com/timothyhull/crg-container/releases "CRG Container Releases") page.
 2. Locate the `Assets` section of the page to find the latest release and click on `Source code (zip)` or `Source code (tar.gz)` to download a compressed copy of the repository files.
-3. Extract the compressed file to create a folder named `crg-container` that contains the repository files.
+3. Extract the compressed file to create a folder named `crg-container` that contains the CRG Container repository files.
   
 </details>
 
@@ -86,7 +86,7 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 
 1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.).
 
-2. Use the `git clone` command to create a folder named `crg-container` that contains the repository files.
+2. Use the `git clone` command to fetch the repository files and place them within a new folder named `crg-container`.
 
     ```shell
     git clone git@github.com:timothyhull/crg-container
@@ -111,12 +111,47 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 
 ### 4. Download and Extract a Release of CRG Scoreboard
 
-[CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository contains the Docker and Docker Compose configuration that automate running CRG in a Container.  You need to download a copy of the repository files to your computer running Docker Desktop.
+[CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository contains the files the run the CRG Scoreboard software.  You need to download a copy of the repository files to your computer running Docker Desktop.
+
+<details>
+  <summary>
+    Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
+  </summary>
 
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
-2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_`.
-3. Move the downloaded `crg-scoreboard_*.zip` file to the extracted or cloned `crg-container` folder.
-4. Extract `crg-scoreboard_*.zip`.
+2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_` (e.g., `crg-scoreboard_v2023.5.zip`).
+3. Move the downloaded `.zip` file with the prefix `crg-scoreboard_` to the extracted or cloned `crg-container` folder on your computer.
+4. Extract the `.zip` file with the prefix `crg-scoreboard_` to create a folder with the prefix `crg-scoreboard_` that contains the CRG Scoreboard repository files.
+
+</details>
+
+<details>
+  <summary>
+    Option 2 - Clone the repository with Git [^5]:
+  </summary>
+
+1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.).
+
+2. Use the `git clone` command to fetch the repository files and place them within a new folder with the prefix `crg-scoreboard_`.
+
+    ```shell
+    git clone git@github.com:rollerderby/scoreboard.git
+    ```
+
+3. Review the `git clone` command response output (optional):
+
+    ```shell
+    # git clone command response output example
+    Cloning into 'scoreboard'...
+    remote: Enumerating objects: 29938, done.
+    remote: Counting objects: 100% (1483/1483), done.
+    remote: Compressing objects: 100% (548/548), done.
+    remote: Total 29938 (delta 795), reused 1357 (delta 749), pack-reused 28455
+    Receiving objects: 100% (29938/29938), 109.79 MiB | 1.91 MiB/s, done.
+    Resolving deltas: 100% (20295/20295), done.
+    ```
+
+4. Confirm your file system has a folder with the prefix `crg-scoreboard_` folder within a folder named `crg-container`:
 
     <details>
       <summary>
@@ -125,39 +160,40 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 
     - Note the `crg-scoreboard_v2023.5` folder within the `crg-container` folder:
 
-    ```shell
-    ├── crg-container
-    │   ├── .devcontainer
-    │   ├── .dockerignore
-    │   ├── .git
-    │   ├── .github
-    │   ├── .gitignore
-    │   ├── .vscode
-    │   ├── Dockerfile
-    │   ├── Dockerfile.dev
-    │   ├── LICENSE
-    │   ├── README.md
-    │   ├── crg-scoreboard_v2023.5
-    │   │   ├── COPYING
-    │   │   ├── COPYING-AL
-    │   │   ├── COPYING-GPL
-    │   │   ├── LICENSES
-    │   │   ├── NOTICE
-    │   │   ├── README.md
-    │   │   ├── blank_statsbook.xlsx
-    │   │   ├── config
-    │   │   ├── html
-    │   │   ├── lib
-    │   │   ├── logs
-    │   │   ├── scoreboard-Windows.exe
-    │   │   ├── scoreboard-mac.command
-    │   │   ├── scoreboard.sh
-    │   │   └── start.html
-    │   ├── crg-scoreboard_v2023.5.zip
-    │   ├── docker-compose.yml
-    │   └── requirements
-    ```
+        ```shell
+        ├── crg-container
+        │   ├── .devcontainer
+        │   ├── .dockerignore
+        │   ├── .git
+        │   ├── .github
+        │   ├── .gitignore
+        │   ├── .vscode
+        │   ├── Dockerfile
+        │   ├── Dockerfile.dev
+        │   ├── LICENSE
+        │   ├── README.md
+        │   ├── crg-scoreboard_v2023.5
+        │   │   ├── COPYING
+        │   │   ├── COPYING-AL
+        │   │   ├── COPYING-GPL
+        │   │   ├── LICENSES
+        │   │   ├── NOTICE
+        │   │   ├── README.md
+        │   │   ├── blank_statsbook.xlsx
+        │   │   ├── config
+        │   │   ├── html
+        │   │   ├── lib
+        │   │   ├── logs
+        │   │   ├── scoreboard-Windows.exe
+        │   │   ├── scoreboard-mac.command
+        │   │   ├── scoreboard.sh
+        │   │   └── start.html
+        │   ├── crg-scoreboard_v2023.5.zip
+        │   ├── docker-compose.yml
+        │   └── requirements
+        ```
 
+    </details>
 </details>
 
 ---
