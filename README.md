@@ -203,7 +203,7 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 The Docker and Docker Compose configuration uses environment variables to make the CRG Scoreboard software on your computer available to the Container that will run CRG.  You need to create an environment variables file on your computer with some data that tells Docker Compose which folder on your computer will be available to the CRG Container.
 
 1. Create a new, blank file in the `crg-container` folder named `.env`.
-2. Open the `.env` file in a text editor.
+2. Open the `.env` file in a text editor (Notepad, TextEdit, VIM, etc.).
 3. Copy the following text and paste it in the `.env` file:
 
     <details>
@@ -233,11 +233,11 @@ The Docker and Docker Compose configuration uses environment variables to make t
 
 ### 6. Disable the CRG GUI Option in the `scoreboard.sh` CRG Launch Script
 
-The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose:
+The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose.  To update the script:
 
 1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#4-download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
 2. Locate and open the file `scoreboard.sh` in any text editor application (Notepad, TextEdit, VIM, etc.).
-3. Adjust the  the line of text that reads `GUI="--gui"` as follows:
+3. Adjust the line of text that reads `GUI="--gui"` as follows:
 
     <details>
       <summary>
@@ -281,67 +281,75 @@ The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/s
 
 ## Run Instructions
 
-### 1. Launch the CRG Container With Docker Compose
+### Launch the CRG Container With Docker Compose
 
-TODO
+You are ready to launch CRG in a Docker Container with Docker Compose.
 
-<details>
-  <summary>
-    Docker Compose command input:
-  </summary>
+1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.).
 
-```shell
-docker compose up
-```
+2. Navigate to the `crg-container` folder on your computer.
 
-</details>
+3. Use Docker Compose to start the CRG Container:
 
-<details>
-  <summary>
-    Successful Docker Compose command output example:
-  </summary>
+    <details>
+      <summary>
+        Docker Compose command input:
+      </summary>
 
-```shell
-[+] Building 56.1s (7/7) FINISHED                                                                       docker:desktop-linux
-  => [crg-container internal] load build definition from Dockerfile                                                      0.0s
-  => => transferring dockerfile: 512B                                                                                    0.0s
-  => [crg-container internal] load metadata for docker.io/library/openjdk:latest                                         0.0s
-  => [crg-container internal] load .dockerignore                                                                         0.0s
-  => => transferring context: 229B                                                                                       0.0s
-  => [crg-container 1/3] FROM docker.io/library/openjdk:latest                                                           0.0s
-  => [crg-container 2/3] RUN microdnf upgrade -y --nodocs &&     microdnf clean all                                     55.3s
-  => [crg-container 3/3] WORKDIR crg-container                                                                           0.0s 
-  => [crg-container] exporting to image                                                                                  0.8s 
-  => => exporting layers                                                                                                 0.7s 
-  => => writing image sha256:e6a67731286f20afdaead94aafee07197ca82df627ce1f2ba99ca78ac63f319a                            0.0s 
-  => => naming to docker.io/library/crg-container-crg-container                                                          0.0s 
-  [+] Running 1/1                                                                                                              
-  ✔ Network crg-container_default            Created                                                                     0.0s 
-  ⠋ Container crg-container-crg-container-1  Created                                                                     0.0s 
-  Attaching to crg-container-1
-  crg-container-1  | Found existing autosave dir - skipping import
-  crg-container-1  | CRG ScoreBoard version v2023.4
-  crg-container-1  | 2024-05-03 01:32:23.293:INFO::main: Logging initialized @482ms to org.eclipse.jetty.util.log.StdErrLog
-  crg-container-1  | Loaded auto-saved scoreboard from ./config/autosave/scoreboard-0-secs-ago.json
-  crg-container-1  | 
-  crg-container-1  | vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-  crg-container-1  | vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-  crg-container-1  | Double-click/open the 'start.html' file, or
-  crg-container-1  | Open a web browser (either Google Chrome or Mozilla Firefox recommended) to:
-  crg-container-1  | http://localhost:8000
-  crg-container-1  | or try one of these URLs:
-  crg-container-1  | http://172.19.0.2:8000/
-  crg-container-1  | http://[fe80:0:0:0:42:acff:fe13:2%eth0]:8000/
-  crg-container-1  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  crg-container-1  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  crg-container-1  |
-```
+    ```shell
+    docker compose up
+    ```
 
-</details>
+    </details>
+
+4. Review the Docker Compose output:
+
+    <details>
+      <summary>
+        Successful Docker Compose command output example:
+      </summary>
+
+    ```shell
+    [+] Building 56.1s (7/7) FINISHED                                                                       docker:desktop-linux
+      => [crg-container internal] load build definition from Dockerfile                                                      0.0s
+      => => transferring dockerfile: 512B                                                                                    0.0s
+      => [crg-container internal] load metadata for docker.io/library/openjdk:latest                                         0.0s
+      => [crg-container internal] load .dockerignore                                                                         0.0s
+      => => transferring context: 229B                                                                                       0.0s
+      => [crg-container 1/3] FROM docker.io/library/openjdk:latest                                                           0.0s
+      => [crg-container 2/3] RUN microdnf upgrade -y --nodocs &&     microdnf clean all                                     55.3s
+      => [crg-container 3/3] WORKDIR crg-container                                                                           0.0s 
+      => [crg-container] exporting to image                                                                                  0.8s 
+      => => exporting layers                                                                                                 0.7s 
+      => => writing image sha256:e6a67731286f20afdaead94aafee07197ca82df627ce1f2ba99ca78ac63f319a                            0.0s 
+      => => naming to docker.io/library/crg-container-crg-container                                                          0.0s 
+      [+] Running 1/1                                                                                                              
+      ✔ Network crg-container_default            Created                                                                     0.0s 
+      ⠋ Container crg-container-crg-container-1  Created                                                                     0.0s 
+      Attaching to crg-container-1
+      crg-container-1  | Found existing autosave dir - skipping import
+      crg-container-1  | CRG ScoreBoard version v2023.4
+      crg-container-1  | 2024-05-03 01:32:23.293:INFO::main: Logging initialized @482ms to org.eclipse.jetty.util.log.StdErrLog
+      crg-container-1  | Loaded auto-saved scoreboard from ./config/autosave/scoreboard-0-secs-ago.json
+      crg-container-1  | 
+      crg-container-1  | vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+      crg-container-1  | vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+      crg-container-1  | Double-click/open the 'start.html' file, or
+      crg-container-1  | Open a web browser (either Google Chrome or Mozilla Firefox recommended) to:
+      crg-container-1  | http://localhost:8000
+      crg-container-1  | or try one of these URLs:
+      crg-container-1  | http://172.19.0.2:8000/
+      crg-container-1  | http://[fe80:0:0:0:42:acff:fe13:2%eth0]:8000/
+      crg-container-1  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      crg-container-1  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      crg-container-1  |
+    ```
+
+    </details>
 
 ---
 
-### 2. Review CRG Container Health Check Status (optional)
+### Review CRG Container Health Check Status (optional)
 
 You may optionally check or monitor the status of the CRG container running in Docker Compose.
 
@@ -393,7 +401,7 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 
 ---
 
-### 3. Access the CRG Web Application
+### Access the CRG Web Application
 
 TODO
 
@@ -403,7 +411,7 @@ TODO
 
 ---
 
-### 4. Stop the CRG Application
+### Stop the CRG Application
 
 To stop the instance of CRG running in Docker Compose:
 
