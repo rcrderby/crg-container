@@ -375,7 +375,7 @@ To stop the instance of CRG running in Docker compose:
 - Accessing the CRG container over a network connection.
 - TODO
 
-## Docker Components
+## Docker Compose Components
 
 - [`Dockerfile`](https://github.com/timothyhull/crg-container/blob/main/Dockerfile "Dockerfile") to create a Docker Image with JRE.
 - [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/main/docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker Container.
