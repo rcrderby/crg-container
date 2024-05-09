@@ -200,11 +200,11 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 
 ### 5. Set Environment Variables
 
-TODO
+The Docker and Docker Compose configuration uses environment variables to make the CRG Scoreboard software on your computer available to the Container that will run CRG.  You need to create an environment variables file on your computer with some data that tells Docker Compose which folder on your computer will be available to the CRG Container.
 
-1. Create a file in the `crg-container` folder named `.env`.
+1. Create a new, blank file in the `crg-container` folder named `.env`.
 2. Open the `.env` file in a text editor.
-3. Copy the text in the following template, paste the text in the `.env` file, and save the changes:
+3. Copy the following text and paste it in the `.env` file:
 
     <details>
       <summary>
@@ -226,6 +226,8 @@ TODO
     ```
 
     </details>
+
+4. Save and close the `.env` file.
 
 ---
 
