@@ -255,7 +255,7 @@ docker compose up
 
 <details>
   <summary>
-    Successful Docker Compose command sample output:
+    Successful Docker Compose command output example:
   </summary>
 
 ```shell
@@ -368,7 +368,7 @@ To stop the instance of CRG running in Docker Compose:
 
     <details>
       <summary>
-        Successful stop of the CRG Container in Docker Compose sample output:
+        Successful stop of the CRG Container in Docker Compose output example:
       </summary>
 
     ```shell
@@ -381,11 +381,20 @@ To stop the instance of CRG running in Docker Compose:
     </details>
 
 
-2. Stop and remove the CRG container and network with the command `docker compose down`:
+2. Stop and remove the CRG Container and Docker Network.
 
     <details>
       <summary>
-        Successful Docker Compose command sample output:
+        Docker Compose command input:
+      </summary>
+
+    ```shell
+    docker compose down
+    ```
+
+    <details>
+      <summary>
+        Successful Docker Compose command output example:
       </summary>
 
     ```shell
