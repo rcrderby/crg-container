@@ -24,7 +24,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 ## Setup Instructions
 
-### 1. Download and Install Docker Desktop
+### Download and Install Docker Desktop
 
 1. Navigate to the [Docker Desktop](https://www.docker.com/products/docker-desktop "Download Docker Desktop") downloads page.
 2. Download the appropriate Docker Desktop release for your OS [^4].
@@ -36,7 +36,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 ---
 
-### 2. Check The Status of Your Docker Runtime
+### Check The Status of Your Docker Runtime
 
 After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Terminal window to verify the Docker Engine is available.
 
@@ -64,7 +64,7 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 ---
 
-### 3. Download the the CRG Container Git Repository
+### Download the the CRG Container Git Repository
 
 The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container GitHub Repository") Git repository contains the Docker and Docker Compose configuration that automate running CRG in a Container.  You need to download a copy of the repository files to your computer running Docker Desktop.
 
@@ -109,7 +109,7 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 
 ---
 
-### 4. Download and Extract a Release of CRG Scoreboard
+### Download and Extract a Release of CRG Scoreboard
 
 [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository contains the files the run the CRG Scoreboard software.  You need to download a copy of the repository files to your computer running Docker Desktop.
 
@@ -198,7 +198,7 @@ The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container 
 
 ---
 
-### 5. Set Environment Variables
+### Set Environment Variables
 
 The Docker and Docker Compose configuration uses environment variables to make the CRG Scoreboard software on your computer available to the Container that will run CRG.  You need to create an environment variables file on your computer with some data that tells Docker Compose which folder on your computer will be available to the CRG Container.
 
@@ -231,11 +231,11 @@ The Docker and Docker Compose configuration uses environment variables to make t
 
 ---
 
-### 6. Disable the CRG GUI Option in the `scoreboard.sh` CRG Launch Script
+### Disable the CRG GUI Option in the `scoreboard.sh` CRG Launch Script
 
 The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose.  To update the script:
 
-1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#4-download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
+1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
 2. Locate and open the file `scoreboard.sh` in any text editor application (Notepad, TextEdit, VIM, etc.).
 3. Adjust the line of text that reads `GUI="--gui"` as follows:
 
