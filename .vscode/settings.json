@@ -5,6 +5,7 @@
         "microdnf",
         "nodocs",
         "pylint",
+        "rollerderby",
         "statsbook",
         "WORKDIR"
     ]
