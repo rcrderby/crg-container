@@ -66,6 +66,8 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 ### 3. Download the the CRG Container Git Repository
 
+TODO
+
 <details>
   <summary>
     Option 1 - Download and extract the latest <strong>crg-container</strong> release:
@@ -104,41 +106,60 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 ### 4. Download and Extract a Release of CRG Scoreboard
 
+TODO
+
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
 2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_`.
 3. Move the downloaded `crg-scoreboard_*.zip` file to the extracted or cloned `crg-container` folder.
 4. Extract `crg-scoreboard_*.zip`.
 
-<details>
-  <summary>
-    Example directory structure after downloading and extracting <strong>crg-scoreboard_v2023.5.zip</strong> in the <strong>crg-container</strong> folder.
-  </summary>
+    <details>
+      <summary>
+        Example directory structure after downloading and extracting <strong>crg-scoreboard_v2023.5.zip</strong> in the <strong>crg-container</strong> folder:
+      </summary>
 
-- Note the `crg-scoreboard_v2023.5` folder within the `crg-container` folder:
+    - Note the `crg-scoreboard_v2023.5` folder within the `crg-container` folder:
 
-```shell
-├── crg-container
-│   ├── .devcontainer
-│   ├── .dockerignore
-│   ├── .git
-│   ├── .github
-│   ├── .gitignore
-│   ├── .vscode
-│   ├── Dockerfile
-│   ├── Dockerfile.dev
-│   ├── LICENSE
-│   ├── README.md
-│   ├── crg-scoreboard_v2023.5
-│   ├── crg-scoreboard_v2023.5.zip
-│   ├── docker-compose.yml
-│   ├── requirements
-```
+    ```shell
+    ├── crg-container
+    │   ├── .devcontainer
+    │   ├── .dockerignore
+    │   ├── .git
+    │   ├── .github
+    │   ├── .gitignore
+    │   ├── .vscode
+    │   ├── Dockerfile
+    │   ├── Dockerfile.dev
+    │   ├── LICENSE
+    │   ├── README.md
+    │   ├── crg-scoreboard_v2023.5
+    │   │   ├── COPYING
+    │   │   ├── COPYING-AL
+    │   │   ├── COPYING-GPL
+    │   │   ├── LICENSES
+    │   │   ├── NOTICE
+    │   │   ├── README.md
+    │   │   ├── blank_statsbook.xlsx
+    │   │   ├── config
+    │   │   ├── html
+    │   │   ├── lib
+    │   │   ├── logs
+    │   │   ├── scoreboard-Windows.exe
+    │   │   ├── scoreboard-mac.command
+    │   │   ├── scoreboard.sh
+    │   │   └── start.html
+    │   ├── crg-scoreboard_v2023.5.zip
+    │   ├── docker-compose.yml
+    │   └── requirements
+    ```
 
 </details>
 
 ---
 
 ### 5. Set Environment Variables
+
+TODO
 
 1. Create a file in the `crg-container` folder named `.env`.
 2. Open the `.env` file in a text editor.
@@ -177,7 +198,7 @@ The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/s
 
     <details>
       <summary>
-        Convert the line that sets the 'GUI' variable to a comment:
+        Prefix the line that sets the 'GUI' variable with a comment character:
       </summary>
 
       ```shell
@@ -199,7 +220,7 @@ The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/s
 
 <details>
   <summary>
-  CRG Java GUI error example:
+  CRG Java GUI error in Docker Compose example:
   </summary>
 
   ```shell
@@ -219,6 +240,8 @@ The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/s
 
 ### 1. Launch the CRG Container With Docker Compose
 
+TODO
+
 <details>
   <summary>
     Docker Compose command input:
@@ -232,7 +255,7 @@ docker compose up
 
 <details>
   <summary>
-    Successful Docker Compose Command Sample Output:
+    Successful Docker Compose command sample output:
   </summary>
 
 ```shell
@@ -290,7 +313,7 @@ The health check is a recurring `curl` HTTP request to the CRG web application s
 
 <details>
   <summary>
-    Health Check Command Input:
+    Health check command input:
   </summary>
 
 You may manually check the status of the CRG container with the following command:
@@ -304,7 +327,7 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 
 <details>
   <summary>
-    Successful Health Check Command Output Example:
+    Successful health check command output example:
   </summary>
 
 ```jsonc
@@ -329,6 +352,8 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 
 ### 3. Access the CRG Web Application
 
+TODO
+
 1. Open a [recommended web browser application](https://github.com/rollerderby/scoreboard#web-browser "CRG ScoreBoard Documentation Browser Recommendation").
 2. Navigate to [http://localhost:8000](http://localhost:8000 "CRG Application Launch Page").
 3. Run the CRG application in accordance with the [CRG ScoreBoard documentation](https://github.com/rollerderby/scoreboard/wiki "CRG ScoreBoard Documentation").
@@ -337,7 +362,7 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 
 ### 4. Stop the CRG Application
 
-To stop the instance of CRG running in Docker compose:
+To stop the instance of CRG running in Docker Compose:
 
 1. Press `Ctrl+C` to stop CRG.
 
