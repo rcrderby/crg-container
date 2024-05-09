@@ -66,7 +66,7 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 ### 3. Download the the CRG Container Git Repository
 
-This repository 
+This repository contains the Docker and Docker Compose configuration that runs CRG in a Container.  You need to download a copy of the files to your computer running Docker Desktop.
 
 <details>
   <summary>
@@ -75,24 +75,27 @@ This repository
 
 1. Navigate to the [crg-container Releases](https://github.com/timothyhull/crg-container/releases "crg-container Releases") page.
 2. Locate the `Assets` section of the page to find the latest release and click on `Source code (zip)` or `Source code (tar.gz)` to download a compressed copy of the repository files.
-3. Extracted the compressed file.
+3. Extract the compressed file to create a folder named `crg-container` that contains the repository files.
   
 </details>
 
 <details>
   <summary>
-    Option 2 - Clone the repository with Git:
+    Option 2 - Clone the repository with Git [^5]:
   </summary>
 
-1. `git clone` command input:
+1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.).
+
+2. Use the `git clone` command to create a folder named `crg-container` that contains the repository files.
 
     ```shell
     git clone git@github.com:timothyhull/crg-container
     ```
 
-1. `git clone` response example output:
+3. Review the `git clone` command response output (optional):
 
     ```shell
+    # git clone command response output example
     Cloning into 'crg-container'...
     remote: Enumerating objects: 234, done.
     remote: Counting objects: 100% (234/234), done.
@@ -431,3 +434,4 @@ To stop the instance of CRG running in Docker Compose:
 [^2]: [Docker Compose Overview](https://docs.docker.com/compose "Docker Compose Overview")
 [^3]: JRE: Java Runtime Environment
 [^4]: OS: Operating System
+[^5]: [Git download an installation instructions](https://git-scm.com "Git download an installation instructions").
