@@ -19,8 +19,8 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 1. Computer running Windows, macOS, or Linux.
 2. Installation of [Docker Desktop](https://docs.docker.com/desktop "Docker Desktop Overview").
-3. Downloaded release of the [crg-container](https://github.com/timothyhull/crg-container/releases "crg-container Releases") repository.
-4. Downloaded release of [CRG ScoreBoard](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases").
+3. Release of the [crg-container](https://github.com/timothyhull/crg-container/releases "crg-container Releases") GitHub repository.
+4. Release of the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") GitHub repository.
 
 ## Setup Instructions
 
@@ -66,7 +66,7 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 ### 3. Download the the CRG Container Git Repository
 
-TODO
+This repository 
 
 <details>
   <summary>
