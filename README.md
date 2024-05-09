@@ -169,6 +169,8 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 ### 6. Disable the CRG GUI Option in the `scoreboard.sh` CRG Launch Script
 
+:bangbang: **Note - failure to complete this step will result in CRG producing the following error when Docker Compose starts CRG**
+
 The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose:
 
 1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#4-download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
@@ -193,8 +195,6 @@ The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/s
     </details>
 
 4. Save and close `scoreboard.sh`.
-
-#### :bangbang: Note - failure to complete this step will result in CRG producing the following error when Docker Compose starts CRG
 
 <details>
   <summary>
@@ -276,7 +276,7 @@ docker compose up
 
 ### 2. Review CRG Container Health Check Status (optional)
 
-TODO: Check the status of the Docker Compose health check:
+You may optionally check or monitor the status of the CRG container running in Docker Compose.
 
 <details>
   <summary>
@@ -291,6 +291,8 @@ The health check is a recurring `curl` HTTP request to the CRG web application s
   <summary>
     Health Check Command Input:
   </summary>
+
+You may manually check the status of the CRG container with the following command:
 
 ```shell
 # Check the health of the most recently-created container
@@ -330,27 +332,43 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 2. Navigate to [http://localhost:8000](http://localhost:8000 "CRG Application Launch Page").
 3. Run the CRG application in accordance with the [CRG ScoreBoard documentation](https://github.com/rollerderby/scoreboard/wiki "CRG ScoreBoard Documentation").
 
+---
+
 ### 4. Stop the CRG Application
 
-TODO: When finished, stop CRG.
+To stop the instance of CRG running in Docker compose:
 
-Press `Ctrl+C` to stop CRG.
+1. Press `Ctrl+C` to stop CRG.
 
-<details>
-  <summary>
-    Successful Docker Compose command sample output:
-  </summary>
+    <details>
+      <summary>
+        Successful stop of the CRG Container in Docker Compose sample output:
+      </summary>
 
-```shell
-Gracefully stopping... (press Ctrl+C again to force)
-[+] Stopping 1/1
-✔ Container crg-container-crg-container-1  Stopped                                                                     0.5s 
-canceled
-```
+    ```shell
+    Gracefully stopping... (press Ctrl+C again to force)
+    [+] Stopping 1/1
+    ✔ Container crg-container-crg-container-1  Stopped                                                                     0.5s 
+    canceled
+    ```
 
-TODO: `docker compose down`
+    </details>
 
-</details>
+
+2. Stop and remove the CRG container and network with the command `docker compose down`:
+
+    <details>
+      <summary>
+        Successful Docker Compose command sample output:
+      </summary>
+
+    ```shell
+    [+] Running 2/0
+    ✔ Container crg-container-crg-container-1  Removed                                                                     0.0s 
+    ✔ Network crg-container_default            Removed                                                                     0.0s 
+    ```
+
+    </details>
 
 ## FAQ
 
