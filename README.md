@@ -463,7 +463,81 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
     How do I access the CRG container from another computer or tablet over a network?
   </summary>
 
-- One nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container and the URL is not directly accessible from another device.
+- A nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container and that URL is not directly accessible from another computer, tablet, etc.
+- However, all you need to do is discover the IP address of your computer and point your web browser at that address instead.
+
+  1. For macOS and Linux computers, open your **Terminal** application and enter the following command:
+
+      <details>
+        <summary>
+        Get IP address command example:
+        </summary>
+
+      ```shell
+      ifconfig | grep 'inet\s' | awk '{print $2}' | grep -v '^127\.'
+      ```
+
+      </details>
+  
+      <details>
+        <summary>
+        Get IP address command output example:
+        </summary>
+
+      ```shell
+      # There may be multiple IP addresses in the output
+      # You may need to attempt connecting to each until one works
+      192.168.100.10
+      ```
+
+      </details>
+
+
+  2. For Windows computers, open your **PowerShell** application and enter the following command:
+
+      <details>
+        <summary>
+        Get IP address command example:
+        </summary>
+
+      ```powershell
+      Get-NetIPAddress | Where-Object {
+        $_.AddressFamily 'IPv4' -and
+        $_.InterfaceAlias -Match '^Ethernet.+' -and
+        $_.PrefixOrigin -ne 'WellKnown'
+      } | Select-Object IPAddress
+      ```
+
+      </details>
+
+      <details>
+        <summary>
+        Get IP address command output example:
+        </summary>
+
+      ```powershell
+      # There may be multiple IP addresses in the output
+      # You may need to attempt connecting to each until one works
+      IPAddress
+      ---------
+      192.168.100.10
+      ```
+
+      </details>
+
+  3. Use your web browser to navigate to the CRG interface using the IP address of your computer in the URL.
+
+      <details>
+        <summary>
+        URL with your computer's IP address example:
+        </summary>
+
+      ```text
+      http://192.168.100.10:8000
+      ```
+
+      </details>
+
 
 </details>
 
