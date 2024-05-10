@@ -28,11 +28,18 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 1. Navigate to the [Docker Desktop](https://www.docker.com/products/docker-desktop "Download Docker Desktop") downloads page.
 2. Download the appropriate Docker Desktop release for your OS [^4].
-3. Follow the OS-specific instructions to install Docker Desktop on your computer:
+3. Follow the OS-specific instructions to install Docker Desktop on your computer.
 
-    - [Windows](https://docs.docker.com/desktop/install/windows-install "Docker Desktop for Windows Installation Guide")
-    - [macOS](https://docs.docker.com/desktop/install/mac-install "Docker Desktop for macOS Installation Guide")
-    - [Linux](https://docs.docker.com/desktop/install/linux-install "Docker Desktop for Linux Installation Guide")  
+    <details>
+      <summary>
+        Docker Installation Instructions:
+      </summary>
+
+      - [Windows](https://docs.docker.com/desktop/install/windows-install "Docker Desktop for Windows Installation Guide")
+      - [macOS](https://docs.docker.com/desktop/install/mac-install "Docker Desktop for macOS Installation Guide")
+      - [Linux](https://docs.docker.com/desktop/install/linux-install "Docker Desktop for Linux Installation Guide")  
+
+    </details>
 
 ---
 
