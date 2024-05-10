@@ -2,11 +2,11 @@
 // https://code.visualstudio.com/docs/remote/devcontainerjson-reference
 {
     // Docker build instructions
-    "name": "crg-container",
     "build": {
         "dockerfile": "../Dockerfile.dev",
         "context": ".."
     },
+    "name": "crg-container",
     "customizations": {
         "vscode": {
             // Visual Studio Code extensions
@@ -24,23 +24,26 @@
             ],
             // Visual Studio Code environment configuration
             "settings": {
-                // Set the default terminal application to bash
-                "#terminal.integrated.defaultProfile.linux#": "/bin/bash",
-                // Customize YAML formatting
-                "[yaml]": {
-                    "editor.insertSpaces": true,
-                    "editor.tabSize": 2,
-                    "editor.autoIndent": "keep",
-                    "editor.quickSuggestions": {
-                        "other": true,
-                        "comments": false,
-                        "strings": true
-                    }
+                "markdownlint.config": {
+                    "extends": "/workspaces/crg-container/.github/linters/.markdown-lint.yml"
                 },
                 // Set Python configuration for runtime, syntax analysis, and linting
                 "python.analysis.useImportHeuristic": true,
                 "python.formatting.provider": "autopep8",
-                "python.pythonPath": "/usr/local/bin/python3"
+                "python.pythonPath": "/usr/local/bin/python3",
+                // Set the default terminal application to bash
+                "#terminal.integrated.defaultProfile.linux#": "/bin/bash",
+                // Customize YAML formatting
+                "[yaml]": {
+                    "editor.autoIndent": "keep",
+                    "editor.insertSpaces": true,
+                    "editor.quickSuggestions": {
+                        "other": true,
+                        "comments": false,
+                        "strings": true
+                    },
+                    "editor.tabSize": 2
+                }
             }
         }
     },
