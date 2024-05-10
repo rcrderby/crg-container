@@ -127,10 +127,10 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    Option 2 - Clone the repository with Git [^5]:
+    Option 2 - Clone the repository with Git:
   </summary>
 
-1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git [^5] commands.
+1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git commands.
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder with the prefix `crg-scoreboard_`.
 
@@ -560,5 +560,5 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 [^2]: [Docker Compose Overview](https://docs.docker.com/compose "Docker Compose Overview")
 [^3]: JRE: Java Runtime Environment
 [^4]: OS: Operating System
-[^5]: [Git download an installation instructions](https://git-scm.com "Git download an installation instructions").
+[^5]: [Git download and installation instructions](https://git-scm.com "Git download an installation instructions").
 [^6]: [Visual Studio Code Development Container Reference](https://code.visualstudio.com/docs/devcontainers/containers "Visual Studio Code Development Container Reference")
