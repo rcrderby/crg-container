@@ -95,14 +95,25 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder named `crg-container`.
 
+    <details>
+      <summary>
+        Git clone command:
+      </summary>
+
     ```shell
     git clone git@github.com:timothyhull/crg-container
     ```
 
+    </details>
+
 3. Review the `git clone` command response output (optional):
 
+    <details>
+      <summary>
+        Git clone command response output example:
+      </summary>
+
     ```shell
-    # git clone command response output example
     Cloning into 'crg-container'...
     remote: Enumerating objects: 234, done.
     remote: Counting objects: 100% (234/234), done.
@@ -141,11 +152,23 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder with the prefix `crg-scoreboard_`.
 
+    <details>
+      <summary>
+        Git clone command:
+      </summary>
+
     ```shell
     git clone git@github.com:rollerderby/scoreboard.git
     ```
 
+    </details>
+
 3. Review the `git clone` command response output (optional):
+
+    <details>
+      <summary>
+        Git clone command response output example:
+      </summary>
 
     ```shell
     # git clone command response output example
@@ -157,6 +180,8 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
     Receiving objects: 100% (29938/29938), 109.79 MiB | 1.91 MiB/s, done.
     Resolving deltas: 100% (20295/20295), done.
     ```
+
+    </details>
 
 4. Confirm your file system has a folder with the prefix `crg-scoreboard_` folder within a folder named `crg-container`:
 
