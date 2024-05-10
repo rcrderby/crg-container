@@ -19,7 +19,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 1. Computer running Windows, macOS, or Linux.
 2. Installation of [Docker Desktop](https://docs.docker.com/desktop "Docker Desktop Overview").
-3. Release of the [CRG Container](https://github.com/timothyhull/crg-container "CRG Container GitHub Repository") GitHub repository.
+3. Release of the [CRG Container](./ "CRG Container GitHub Repository") GitHub repository.
 4. Release of the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository.
 
 ## Setup Instructions
@@ -66,7 +66,7 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 ### Download the the CRG Container Git Repository
 
-The [CRG Container](https://github.com/timothyhull/crg-container "CRG Container GitHub Repository") Git repository contains the Docker and Docker Compose configuration that automate running CRG in a Container.  You need to download a copy of the repository files to your computer running Docker Desktop.
+The [CRG Container](./ "CRG Container GitHub Repository") Git repository contains the Docker and Docker Compose configuration that automate running CRG in a Container.  You need to download a copy of the repository files to your computer running Docker Desktop.
 
 <details>
   <summary>
@@ -358,7 +358,7 @@ You may optionally check or monitor the status of the CRG container running in D
     Overview:
   </summary>
 
-The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/main/docker-compose.yml "Docker Compose Health Check") file.
+The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml`](./docker-compose.yml "Docker Compose Health Check") file.
 
 </details>
 
@@ -543,13 +543,13 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 ## Docker Compose Components
 
-- [`Dockerfile`](https://github.com/timothyhull/crg-container/blob/main/Dockerfile "Dockerfile") to create a Docker Image with JRE.
-- [`docker-compose.yml`](https://github.com/timothyhull/crg-container/blob/main/docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker Container.
+- [`Dockerfile`](./Dockerfile "Dockerfile") to create a Docker Image with JRE.
+- [`docker-compose.yml`](./docker-compose.yml "CRG Container Service Definition File") to automate the deployment of CRG in a Docker Container.
 
 ## Development
 
-- Visual Studio Code Development Container.
-- TODO
+- The [CRG Container](./ "CRG Container GitHub Repository") GitHub repository includes a Visual Studio Code Development Container [^6] configuration file named [`.devcontainer/devcontainer.json`](./.devcontainer/devcontainer.json "Visual Studio Code Development Container Configuration File").
+  - You may open this repository in a Visual Studio Code Development Container to contribute, test, etc. using a common development environment.
 
 ## References
 
@@ -561,3 +561,4 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 [^3]: JRE: Java Runtime Environment
 [^4]: OS: Operating System
 [^5]: [Git download an installation instructions](https://git-scm.com "Git download an installation instructions").
+[^6]: [Visual Studio Code Development Container Reference](https://code.visualstudio.com/docs/devcontainers/containers "Visual Studio Code Development Container Reference")
