@@ -15,9 +15,6 @@ operator-profiles/
 .zip
 _archive/
 
-# macOS Spotlight Index
-.DS_Store
-
 # _gitignore folder
 _gitignore/
 
