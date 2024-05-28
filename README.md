@@ -2,7 +2,7 @@
 
 ## Status
 
-[![Super-Linter](https://github.com/timothyhull/crg-container/actions/workflows/lint-files.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![Super-Linter](https://github.com/rcrderby/crg-container/actions/workflows/lint-files.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 ## Overview
 
@@ -80,7 +80,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
     Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
   </summary>
 
-1. Navigate to the [CRG Container Releases](https://github.com/timothyhull/crg-container/releases "CRG Container Releases") page.
+1. Navigate to the [CRG Container Releases](https://github.com/rcrderby/crg-container/releases "CRG Container Releases") page.
 2. Locate the `Assets` section of the page to find the latest release and click on `Source code (zip)` or `Source code (tar.gz)` to download a compressed copy of the repository files.
 3. Extract the compressed file to create a folder named `crg-container` that contains the CRG Container repository files.
   
@@ -101,7 +101,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
       </summary>
 
     ```shell
-    git clone git@github.com:timothyhull/crg-container
+    git clone git@github.com:rcrderby/crg-container
     ```
 
     </details>
