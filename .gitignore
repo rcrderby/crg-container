@@ -10,6 +10,7 @@ _statsbook-files/
 crg-scoreboard_*/
 crg-*.zip
 operator-profiles/
+_backup
 
 # Compressed files/archives
 .zip
