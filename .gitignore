@@ -9,7 +9,7 @@ _statsbook-files/
 # CRG files
 crg-scoreboard_*/
 crg-*.zip
-operator-profiles/
+_json_exports
 _backup
 
 # Compressed files/archives
