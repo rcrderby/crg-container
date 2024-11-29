@@ -21,8 +21,10 @@ services:
       # Set path to Dockerfile and Dockerfile name
       context: ./
       dockerfile: Dockerfile
-    # Command to start CRG
-    command: ["/bin/bash", "-c", "./scoreboard.sh"]
+    # Command to comment the 'GUI' line in scoreboard.sh and start CRG
+    command: >
+        /bin/bash -c "sed -i -e 's/^GUI/#\ GUI/' ./scoreboard.sh
+        && ./scoreboard.sh"
     # Set a container restart policy to recover from a container failure
     deploy:
       restart_policy:
