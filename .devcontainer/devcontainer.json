@@ -11,6 +11,7 @@
         "vscode": {
             // Visual Studio Code extensions
             "extensions": [
+                "brandonfowler.github-releases",
                 "davidanson.vscode-markdownlint",
                 "github.vscode-github-actions",
                 "github.vscode-pull-request-github",
