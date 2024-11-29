@@ -261,56 +261,6 @@ The Docker and Docker Compose configuration uses environment variables to make t
 
 4. Save and close the `.env` file.
 
----
-
-### Disable the CRG GUI Option in the `scoreboard.sh` CRG Launch Script
-
-The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose.  To update the script:
-
-1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
-2. Locate and open the file `scoreboard.sh` in any text editor application (Notepad, TextEdit, VIM, etc.).
-3. Adjust the line of text that reads `GUI="--gui"` as follows:
-
-    <details>
-      <summary>
-        Prefix the line that sets the 'GUI' variable with a comment character:
-      </summary>
-
-      ```shell
-      # Locate this line in scoreboard.sh
-      GUI="--gui"
-      ```
-
-      ```shell
-      # Add a '# ' prefix to this line so it reads
-      # GUI="--gui"
-      ```
-
-    </details>
-
-4. Save and close `scoreboard.sh`.
-
-
-:bangbang: **Note - failure to complete this step will result in CRG producing the following error when Docker Compose starts CRG:**
-
-<details>
-  <summary>
-  CRG Java GUI error in Docker Compose example:
-  </summary>
-
-  ```shell
-  crg-container-1  | Exception in thread "main" java.lang.reflect.InvocationTargetException
-  crg-container-1  |  at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
-  crg-container-1  |  at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-  crg-container-1  | Caused by: java.awt.HeadlessException: 
-  crg-container-1  | No X11 DISPLAY variable was set,
-  crg-container-1  | but this program performed an operation which requires it.
-  crg-container-1  |  at java.desktop/java.awt.GraphicsEnvironment.checkHeadless(GraphicsEnvironment.java:166)
-  crg-container-1  |  at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-  ```
-
-</details>
-
 ## Run Instructions
 
 ### Launch the CRG Container With Docker Compose
@@ -572,6 +522,57 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 
 </details>
+
+## Troubleshooting
+
+### Java exception `No X11 DISPLAY variable was set` during Container launch
+
+The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose, and the [`docker-compose.yml`](./docker-compose.yml "Docker Compose File") will automatically attempt to perform the modification.
+
+If the modification fails, you will see the following error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
+
+<details>
+  <summary>
+  CRG Java GUI error in Docker Compose example:
+  </summary>
+
+  ```shell
+  crg-container-1  | Exception in thread "main" java.lang.reflect.InvocationTargetException
+  crg-container-1  |  at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+  crg-container-1  |  at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+  crg-container-1  | Caused by: java.awt.HeadlessException: 
+  crg-container-1  | No X11 DISPLAY variable was set,
+  crg-container-1  | but this program performed an operation which requires it.
+  crg-container-1  |  at java.desktop/java.awt.GraphicsEnvironment.checkHeadless(GraphicsEnvironment.java:166)
+  crg-container-1  |  at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+  ```
+
+</details>
+
+You may manually perform the following steps to update the script and resolve the error:
+
+1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
+2. Locate and open the file `scoreboard.sh` in any text editor application (Notepad, TextEdit, VIM, etc.).
+3. Adjust the line of text that reads `GUI="--gui"` as follows:
+
+    <details>
+      <summary>
+        Prefix the line that sets the 'GUI' variable with a comment character:
+      </summary>
+
+      ```shell
+      # Locate this line in scoreboard.sh
+      GUI="--gui"
+      ```
+
+      ```shell
+      # Add a '# ' prefix to this line so it reads
+      # GUI="--gui"
+      ```
+
+    </details>
+
+4. Save and close `scoreboard.sh`.
 
 ## Docker Compose Components
 
