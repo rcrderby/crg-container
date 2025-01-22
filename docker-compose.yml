@@ -1,7 +1,6 @@
 # Docker Compose file to run the CRG scoreboard application with Jamstats
 ## https://docs.docker.com/reference/compose-file/
 
-## Add dependson
 ## Create shared volumes
 ## Create shared build args (if possible)
 ## Add link to Jamstats repo
