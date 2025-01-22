@@ -1,4 +1,4 @@
-# Dockerfile for CRG Container
+# Dockerfile for the CRG Container Scoreboard
 
 # Base image
 FROM openjdk:latest
