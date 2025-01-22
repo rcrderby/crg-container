@@ -1,16 +1,23 @@
 {
     "cSpell.words": [
         "brandonfowler",
+        "Breadpool",
         "cqaekfe",
+        "darkgrid",
         "getifaddr",
         "Hadolint",
+        "healthcheck",
         "inet",
+        "itdv",
+        "jamstats",
         "microdnf",
         "nodocs",
         "pylint",
         "rcrderby",
         "rollerderby",
+        "scoreboardserver",
         "statsbook",
+        "venv",
         "WORKDIR"
     ]
 }
