@@ -1,0 +1,2 @@
+# Jamstats application
+jamstats
