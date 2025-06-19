@@ -249,8 +249,8 @@ The Docker and Docker Compose configuration uses environment variables to make t
     CRG_SOURCE_VOLUME=.
 
     # Local path relative to CRG_SOURCE_VOLUME for the extracted CRG application
-    ## Default value is CRG version 2023.5
-    CRG_SOURCE_DIR=crg-scoreboard_v2023.5
+    ## Default value is CRG version 2023.6
+    CRG_SOURCE_DIR=crg-scoreboard_v2023.6
 
     # Name of the folder to create and mount files to on the CRG container instance
     ## Default value is 'crg-container'
