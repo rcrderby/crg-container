@@ -36,6 +36,10 @@ services:
     env_file:
       - path: .env
         required: true
+    # Environment variables
+    environment:
+      # Set the time zone
+      - TZ=${CRG_TIME_ZONE}
     # Check the status of the web application
     ## curl -fIs http://crg-container:8000
     ## Monitor results with the following command
