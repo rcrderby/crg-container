@@ -255,6 +255,11 @@ The Docker and Docker Compose configuration uses environment variables to make t
     # Name of the folder to create and mount files to on the CRG container instance
     ## Default value is 'crg-container'
     CRG_MOUNT_DIR=crg-container
+
+    # Local time zone for the CRG container instance.
+    ## Defaults to UTC time if not specified.
+    ## Use the time zone abbreviations found at https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.
+    CRG_TIME_ZONE=America/Los_Angeles
     ```
 
     </details>
