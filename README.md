@@ -131,7 +131,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 ---
 
-### Download and Extract a Release of CRG Scoreboard
+### Download and Extract or Clone a Release of CRG Scoreboard
 
 [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository contains the files the run the CRG Scoreboard software.  You need to download a copy of the repository files to your computer running Docker Desktop.
 
@@ -190,47 +190,47 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
     </details>
 
-4. Confirm your file system has a folder with the prefix `crg-scoreboard_` folder within a folder named `crg-container`:
+After downloading, confirm your file system has a folder with the prefix `crg-scoreboard_` folder *within* a folder named `crg-container`:
 
-    <details open>
-      <summary>
-        :heavy_plus_sign: Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
-      </summary>
+  <details open>
+    <summary>
+      :heavy_plus_sign: Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
+    </summary>
 
-      ```shell
-      ├── crg-container
-      │   ├── .devcontainer
-      │   ├── .dockerignore
-      │   ├── .git
-      │   ├── .github
-      │   ├── .gitignore
-      │   ├── .vscode
-      │   ├── Dockerfile
-      │   ├── Dockerfile.dev
-      │   ├── LICENSE
-      │   ├── README.md
-      │   ├── crg-scoreboard_v2025.6
-      │   │   ├── COPYING
-      │   │   ├── COPYING-AL
-      │   │   ├── COPYING-GPL
-      │   │   ├── LICENSES
-      │   │   ├── NOTICE
-      │   │   ├── README.md
-      │   │   ├── blank_statsbook.xlsx
-      │   │   ├── config
-      │   │   ├── html
-      │   │   ├── lib
-      │   │   ├── logs
-      │   │   ├── scoreboard-Windows.exe
-      │   │   ├── scoreboard-mac.command
-      │   │   ├── scoreboard.sh
-      │   │   └── start.html
-      │   ├── crg-scoreboard_v2025.6.zip
-      │   ├── docker-compose.yml
-      │   └── requirements
-      ```
+  ```shell
+  ├── crg-container
+  │   ├── .devcontainer
+  │   ├── .dockerignore
+  │   ├── .git
+  │   ├── .github
+  │   ├── .gitignore
+  │   ├── .vscode
+  │   ├── Dockerfile
+  │   ├── Dockerfile.dev
+  │   ├── LICENSE
+  │   ├── README.md
+  │   ├── crg-scoreboard_v2025.6
+  │   │   ├── COPYING
+  │   │   ├── COPYING-AL
+  │   │   ├── COPYING-GPL
+  │   │   ├── LICENSES
+  │   │   ├── NOTICE
+  │   │   ├── README.md
+  │   │   ├── blank_statsbook.xlsx
+  │   │   ├── config
+  │   │   ├── html
+  │   │   ├── lib
+  │   │   ├── logs
+  │   │   ├── scoreboard-Windows.exe
+  │   │   ├── scoreboard-mac.command
+  │   │   ├── scoreboard.sh
+  │   │   └── start.html
+  │   ├── crg-scoreboard_v2025.6.zip
+  │   ├── docker-compose.yml
+  │   └── requirements
+  ```
 
-    </details>
+  </details>
 </details>
 
 > [!IMPORTANT]
