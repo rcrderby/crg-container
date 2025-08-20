@@ -8,12 +8,14 @@
 
 This repository provides a mechanism to run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container [^1], using Docker Compose [^2] to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
 
+- Consistency:
+  - There is no need to install a JRE [^3] on your computer; it's built into the Container.
+  - CRG running in a Container behaves the same way whether you're running Windows, macOS, or Linux.
 - Simplicity:
-  - Follow one-time [setup instructions](#setup-instructions "Setup Instructions") and then easily launch CRG.
+  - Follow one-time [setup instructions](#setup-instructions "Setup Instructions") and then easily switch between CRG versions, instances, etc.
   - Build, deploy, and run CRG with the same [single command](#run-instructions "Run Instructions") on any Windows, macOS, or Linux computer with Docker installed.
 - Security:
-  - There is no need to install a JRE [^3] on your computer.
-  - The JRE instance that runs CRG exists in an isolated, ephemeral Docker Container.
+  - The JRE instance that runs CRG exists in an isolated, ephemeral Docker Container that won't interfere with other applications on your computer.
 
 ## Requirements
 
@@ -30,9 +32,9 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 2. Download the appropriate Docker Desktop release for your OS [^4].
 3. Follow the OS-specific instructions to install Docker Desktop on your computer.
 
-    <details>
+    <details open>
       <summary>
-        Docker Installation Instructions:
+       :heavy_plus_sign: Docker Installation Instructions:
       </summary>
 
       - [Windows](https://docs.docker.com/desktop/install/windows-install "Docker Desktop for Windows Installation Guide")
@@ -47,9 +49,9 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Terminal window to verify the Docker Engine is available.
 
-<details>
+<details open>
   <summary>
-    Enter this command to confirm the Docker Engine is active:
+    :heavy_plus_sign: Enter this command to confirm the Docker Engine is active:
   </summary>
 
   ```shell
@@ -58,13 +60,13 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 </details>
 
-<details>
+<details open>
   <summary>
-    Confirm the response from the Docker Engine looks something like this:
+    :heavy_plus_sign: Confirm the response from the Docker Engine looks something like this:
   </summary>
 
   ```shell
-  Docker version 26.0.0, build 2ae903e
+  Docker version 28.3.2, build 578ccf6
   ```
 
 </details>
@@ -77,27 +79,29 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
+    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release.
   </summary>
 
 1. Navigate to the [CRG Container Releases](https://github.com/rcrderby/crg-container/releases "CRG Container Releases") page.
+
 2. Locate the `Assets` section of the page to find the latest release and click on `Source code (zip)` or `Source code (tar.gz)` to download a compressed copy of the repository files.
+
 3. Extract the compressed file to create a folder named `crg-container` that contains the CRG Container repository files.
   
 </details>
 
 <details>
   <summary>
-    Option 2 - Clone the repository with Git:
+    :heavy_plus_sign: Option 2 - Clone the repository with Git.
   </summary>
 
 1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git [^5] commands.
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder named `crg-container`.
 
-    <details>
+    <details open>
       <summary>
-        Git clone command:
+        :heavy_plus_sign: Git clone command:
       </summary>
 
     ```shell
@@ -110,7 +114,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
     <details>
       <summary>
-        Git clone command response output example:
+        :heavy_plus_sign: Git clone command response output example:
       </summary>
 
     ```shell
@@ -127,34 +131,37 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 ---
 
-### Download and Extract a Release of CRG Scoreboard
+### Download and Extract or Clone a Release of CRG Scoreboard
 
 [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository contains the files the run the CRG Scoreboard software.  You need to download a copy of the repository files to your computer running Docker Desktop.
 
 <details>
   <summary>
-    Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
+    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release.
   </summary>
 
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
-2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_` (e.g., `crg-scoreboard_v2023.5.zip`).
+
+2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_` (e.g., `crg-scoreboard_v2025.6.zip`).
+
 3. Move the downloaded `.zip` file with the prefix `crg-scoreboard_` to the extracted or cloned `crg-container` folder on your computer.
+
 4. Extract the `.zip` file with the prefix `crg-scoreboard_` to create a folder with the prefix `crg-scoreboard_` that contains the CRG Scoreboard repository files.
 
 </details>
 
 <details>
   <summary>
-    Option 2 - Clone the repository with Git:
+    :heavy_plus_sign: Option 2 - Clone the repository with Git.
   </summary>
 
 1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git commands.
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder with the prefix `crg-scoreboard_`.
 
-    <details>
+    <details open>
       <summary>
-        Git clone command:
+        :heavy_plus_sign: Git clone command:
       </summary>
 
     ```shell
@@ -167,7 +174,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
     <details>
       <summary>
-        Git clone command response output example:
+        :heavy_plus_sign: Git clone command response output example:
       </summary>
 
     ```shell
@@ -182,50 +189,52 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
     ```
 
     </details>
+</details>
 
-4. Confirm your file system has a folder with the prefix `crg-scoreboard_` folder within a folder named `crg-container`:
+---
 
-    <details>
-      <summary>
-        Example directory structure after downloading and extracting <strong>crg-scoreboard_v2023.5.zip</strong> in the <strong>crg-container</strong> folder:
-      </summary>
+> [!IMPORTANT]
+> After downloading a CRG Scoreboard release, confirm your file system has a folder with the prefix `crg-scoreboard_` folder *within* a folder named `crg-container`.
+> In the example below, note that the `crg-scoreboard_v2025.6` folder is within the `crg-container` folder:
 
-    - Note the `crg-scoreboard_v2023.5` folder within the `crg-container` folder:
+<details open>
+  <summary>
+    :heavy_plus_sign: Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
+  </summary>
 
-        ```shell
-        ├── crg-container
-        │   ├── .devcontainer
-        │   ├── .dockerignore
-        │   ├── .git
-        │   ├── .github
-        │   ├── .gitignore
-        │   ├── .vscode
-        │   ├── Dockerfile
-        │   ├── Dockerfile.dev
-        │   ├── LICENSE
-        │   ├── README.md
-        │   ├── crg-scoreboard_v2023.5
-        │   │   ├── COPYING
-        │   │   ├── COPYING-AL
-        │   │   ├── COPYING-GPL
-        │   │   ├── LICENSES
-        │   │   ├── NOTICE
-        │   │   ├── README.md
-        │   │   ├── blank_statsbook.xlsx
-        │   │   ├── config
-        │   │   ├── html
-        │   │   ├── lib
-        │   │   ├── logs
-        │   │   ├── scoreboard-Windows.exe
-        │   │   ├── scoreboard-mac.command
-        │   │   ├── scoreboard.sh
-        │   │   └── start.html
-        │   ├── crg-scoreboard_v2023.5.zip
-        │   ├── docker-compose.yml
-        │   └── requirements
-        ```
+  ```shell
+  ├── crg-container
+  │   ├── .devcontainer
+  │   ├── .dockerignore
+  │   ├── .git
+  │   ├── .github
+  │   ├── .gitignore
+  │   ├── .vscode
+  │   ├── Dockerfile
+  │   ├── Dockerfile.dev
+  │   ├── LICENSE
+  │   ├── README.md
+  │   ├── crg-scoreboard_v2025.6
+  │   │   ├── COPYING
+  │   │   ├── COPYING-AL
+  │   │   ├── COPYING-GPL
+  │   │   ├── LICENSES
+  │   │   ├── NOTICE
+  │   │   ├── README.md
+  │   │   ├── blank_statsbook.xlsx
+  │   │   ├── config
+  │   │   ├── html
+  │   │   ├── lib
+  │   │   ├── logs
+  │   │   ├── scoreboard-Windows.exe
+  │   │   ├── scoreboard-mac.command
+  │   │   ├── scoreboard.sh
+  │   │   └── start.html
+  │   ├── crg-scoreboard_v2025.6.zip
+  │   ├── docker-compose.yml
+  │   └── requirements
+  ```
 
-    </details>
 </details>
 
 ---
@@ -238,9 +247,9 @@ The Docker and Docker Compose configuration uses environment variables to make t
 2. Open the `.env` file in a text editor (Notepad, TextEdit, VIM, etc.).
 3. Copy the following text and paste it in the `.env` file:
 
-    <details>
+    <details open>
       <summary>
-        Default environment variables template:
+        :heavy_plus_sign: Default environment variables template:
       </summary>
 
     ```shell
@@ -249,8 +258,8 @@ The Docker and Docker Compose configuration uses environment variables to make t
     CRG_SOURCE_VOLUME=.
 
     # Local path relative to CRG_SOURCE_VOLUME for the extracted CRG application
-    ## Default value is CRG version 2023.6
-    CRG_SOURCE_DIR=crg-scoreboard_v2023.6
+    ## Default value is CRG version 2025.6
+    CRG_SOURCE_DIR=crg-scoreboard_v2025.6
 
     # Name of the folder to create and mount files to on the CRG container instance
     ## Default value is 'crg-container'
@@ -278,9 +287,9 @@ You are ready to launch CRG in a Docker Container with Docker Compose.
 
 3. Use Docker Compose to start the CRG Container:
 
-    <details>
+    <details open >
       <summary>
-        Docker Compose command input:
+        :heavy_plus_sign: Docker Compose command input:
       </summary>
 
     ```shell
@@ -291,9 +300,9 @@ You are ready to launch CRG in a Docker Container with Docker Compose.
 
 4. Review the Docker Compose output:
 
-    <details>
+    <details open>
       <summary>
-        Successful Docker Compose command output example:
+        :heavy_plus_sign: Successful Docker Compose command output example:
       </summary>
 
     ```shell
@@ -315,8 +324,8 @@ You are ready to launch CRG in a Docker Container with Docker Compose.
       ⠋ Container crg-container-crg-container-1  Created                                                                     0.0s 
       Attaching to crg-container-1
       crg-container-1  | Found existing autosave dir - skipping import
-      crg-container-1  | CRG ScoreBoard version v2023.4
-      crg-container-1  | 2024-05-03 01:32:23.293:INFO::main: Logging initialized @482ms to org.eclipse.jetty.util.log.StdErrLog
+      crg-container-1  | CRG ScoreBoard version v2025.6
+      crg-container-1  | 2025-08-20 13:32:23.293:INFO::main: Logging initialized @482ms to org.eclipse.jetty.util.log.StdErrLog
       crg-container-1  | Loaded auto-saved scoreboard from ./config/autosave/scoreboard-0-secs-ago.json
       crg-container-1  | 
       crg-container-1  | vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -342,7 +351,7 @@ You may optionally check or monitor the status of the CRG container running in D
 
 <details>
   <summary>
-    Overview:
+    :heavy_plus_sign: Overview:
   </summary>
 
 The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml`](./docker-compose.yml "Docker Compose Health Check") file.
@@ -351,7 +360,7 @@ The health check is a recurring `curl` HTTP request to the CRG web application s
 
 <details>
   <summary>
-    Health check command input:
+    :heavy_plus_sign: Health check command input:
   </summary>
 
 You may manually check the status of the CRG container with the following command:
@@ -365,7 +374,7 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 
 <details>
   <summary>
-    Successful health check command output example:
+    :heavy_plus_sign: Successful health check command output example:
   </summary>
 
 ```jsonc
@@ -375,10 +384,10 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
   "FailingStreak": 0,
   "Log": [
     {
-      "Start": "2024-05-03T12:00:00.000000000Z",
-      "End": "2024-05-03T12:00:00.000000000",
+      "Start": "2025-08-20T12:00:00.000000000Z",
+      "End": "2025-08-20T12:00:00.000000000",
       "ExitCode": 0,
-      "Output": "HTTP/1.1 200 OK\r\nDate: Fri, 03 May 2024 01:50:54 GMT\r\nSet-Cookie: CRG_SCOREBOARD=node0v5ap3t21va5cq5zx2cqaekfe36.node0; Path=/; Expires=Sat, 18-May-2024 12:00:00 GMT; Max-Age=1296000; HttpOnly; SameSite=Lax\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\nLast-Modified: Tue, 03 Oct 2023 00:56:04 GMT\r\nContent-Type: text/html;charset=utf-8\r\nAccept-Ranges: bytes\r\n"
+      "Output": "HTTP/1.1 200 OK\r\nDate: Wed, 20 August 2025 01:50:54 GMT\r\nSet-Cookie: CRG_SCOREBOARD=node0v5ap3t21va5cq5zx2cqaekfe36.node0; Path=/; Expires=Thu, 21-Aug-2025 12:00:00 GMT; Max-Age=1296000; HttpOnly; SameSite=Lax\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\nLast-Modified: Tue, 03 Oct 2023 00:56:04 GMT\r\nContent-Type: text/html;charset=utf-8\r\nAccept-Ranges: bytes\r\n"
     }
   ]
 }
@@ -404,9 +413,9 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 1. Press `Ctrl+C` to stop CRG.
 
-    <details>
+    <details open>
       <summary>
-        Successful stop of the CRG Container in Docker Compose output example:
+        :heavy_plus_sign: Successful stop of the CRG Container in Docker Compose output example:
       </summary>
 
     ```shell
@@ -421,18 +430,18 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 2. Stop and remove the CRG Container and Docker Network.
 
-    <details>
+    <details open>
       <summary>
-        Docker Compose command input:
+        :heavy_plus_sign: Docker Compose command input:
       </summary>
 
     ```shell
     docker compose down
     ```
 
-    <details>
+    <details open>
       <summary>
-        Successful Docker Compose command output example:
+        :heavy_plus_sign: Successful Docker Compose command output example:
       </summary>
 
     ```shell
@@ -447,17 +456,17 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 <details>
   <summary>
-    How do I access the CRG container from another computer or tablet over a network?
+    :heavy_plus_sign: How do I access the CRG container from another computer or tablet over a network?
   </summary>
 
-- A nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container and that URL is not directly accessible from another computer, tablet, etc.
-- However, all you need to do is discover the IP address of your computer and point your web browser at that address instead.
+- A nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container, and that URL is *not* directly accessible from another computer, tablet, etc.
+- However, all you need to do is identify the IP address of your computer and point your web browser at that URL instead.
 
   1. For macOS and Linux computers, open your **Terminal** application and enter the following command:
 
       <details>
         <summary>
-        Get IP address command example:
+        :heavy_plus_sign: Get IP address command example:
         </summary>
 
       ```shell
@@ -468,7 +477,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
   
       <details>
         <summary>
-        Get IP address command output example:
+        :heavy_plus_sign: Get IP address command output example:
         </summary>
 
       ```shell
@@ -484,7 +493,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
       <details>
         <summary>
-        Get IP address command example:
+        :heavy_plus_sign: Get IP address command example:
         </summary>
 
       ```powershell
@@ -499,7 +508,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
       <details>
         <summary>
-        Get IP address command output example:
+        :heavy_plus_sign: Get IP address command output example:
         </summary>
 
       ```powershell
@@ -516,7 +525,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
       <details>
         <summary>
-        URL with your computer's IP address example:
+        :heavy_plus_sign: URL with your computer's IP address example:
         </summary>
 
       ```text
@@ -532,13 +541,32 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 ### Java exception `No X11 DISPLAY variable was set` during Container launch
 
-The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose, and the [`docker-compose.yml`](./docker-compose.yml "Docker Compose File") will automatically attempt to perform the modification.
+> [!NOTE]
+> The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly in a Docker Container.
 
-If the modification fails, you will see the following error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
+The modification tells CRG to run without launching a separate Java window to display program output, which isn't supported in the Docker Container.
+
+> [!TIP]
+> Docker Compose will **automatically** run a [command](https://github.com/rcrderby/crg-container/blob/b4dc02507373b9e534d72d6df469929dcd5ebe49/docker-compose.yml#L24-L27 "Docker Compose Command") to perform the necessary modification.
 
 <details>
   <summary>
-  CRG Java GUI error in Docker Compose example:
+  :heavy_plus_sign: Docker Compose Command that modifies the CRG launch script:
+  </summary>
+
+  ```shell
+  /bin/bash -c "sed -i -e 's/^GUI/#\ GUI/' ./scoreboard.sh
+          && ./scoreboard.sh"
+  ```
+
+</details>
+
+> [!WARNING]
+> If the modification fails, you will see an error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
+
+<details>
+  <summary open>
+  :heavy_plus_sign: CRG Java GUI error in Docker Compose example:
   </summary>
 
   ```shell
@@ -556,13 +584,13 @@ If the modification fails, you will see the following error when you [launch the
 
 You may manually perform the following steps to update the script and resolve the error:
 
-1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
+1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#download-and-extract-or-clone-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
 2. Locate and open the file `scoreboard.sh` in any text editor application (Notepad, TextEdit, VIM, etc.).
 3. Adjust the line of text that reads `GUI="--gui"` as follows:
 
     <details>
       <summary>
-        Prefix the line that sets the 'GUI' variable with a comment character:
+        :heavy_plus_sign: Prefix the line that sets the 'GUI' variable with a comment character:
       </summary>
 
       ```shell
