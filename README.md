@@ -12,7 +12,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
   - There is no need to install a JRE [^3] on your computer; it's built into the Container.
   - CRG running in a Container behaves the same way whether you're running Windows, macOS, or Linux.
 - Simplicity:
-  - Follow one-time [setup instructions](#setup-instructions "Setup Instructions") and then easily switch between CRG versions.
+  - Follow one-time [setup instructions](#setup-instructions "Setup Instructions") and then easily switch between CRG versions, instances, etc.
   - Build, deploy, and run CRG with the same [single command](#run-instructions "Run Instructions") on any Windows, macOS, or Linux computer with Docker installed.
 - Security:
   - The JRE instance that runs CRG exists in an isolated, ephemeral Docker Container that won't interfere with other applications on your computer.
