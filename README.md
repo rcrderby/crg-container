@@ -189,13 +189,14 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
     ```
 
     </details>
+</details>
 
-After downloading, confirm your file system has a folder with the prefix `crg-scoreboard_` folder *within* a folder named `crg-container`:
+After downloading a CRG Scoreboard release, confirm your file system has a folder with the prefix `crg-scoreboard_` folder *within* a folder named `crg-container`:
 
-  <details open>
-    <summary>
-      :heavy_plus_sign: Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
-    </summary>
+<details open>
+  <summary>
+    :heavy_plus_sign: Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
+  </summary>
 
   ```shell
   ├── crg-container
@@ -230,7 +231,6 @@ After downloading, confirm your file system has a folder with the prefix `crg-sc
   │   └── requirements
   ```
 
-  </details>
 </details>
 
 > [!IMPORTANT]
