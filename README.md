@@ -453,7 +453,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
   </summary>
 
 - A nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container and that URL is not directly accessible from another computer, tablet, etc.
-- However, all you need to do is discover the IP address of your computer and point your web browser at that address instead.
+- However, all you need to do is identify the IP address of your computer and point your web browser at that address instead.
 
   1. For macOS and Linux computers, open your **Terminal** application and enter the following command:
 
