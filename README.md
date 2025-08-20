@@ -233,7 +233,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
     </details>
 </details>
 
-> [!NOTE]
+> [!IMPORTANT]
 > Note that the `crg-scoreboard_v2025.6` folder is within the `crg-container` folder:
 
 ---
