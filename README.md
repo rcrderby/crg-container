@@ -452,8 +452,8 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
     How do I access the CRG container from another computer or tablet over a network?
   </summary>
 
-- A nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container and that URL is not directly accessible from another computer, tablet, etc.
-- However, all you need to do is identify the IP address of your computer and point your web browser at that address instead.
+- A nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container, and that URL is *not* directly accessible from another computer, tablet, etc.
+- However, all you need to do is identify the IP address of your computer and point your web browser at that URL instead.
 
   1. For macOS and Linux computers, open your **Terminal** application and enter the following command:
 
@@ -534,9 +534,14 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 ### Java exception `No X11 DISPLAY variable was set` during Container launch
 
-The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly with Docker Compose, and the [`docker-compose.yml`](./docker-compose.yml "Docker Compose File") will automatically attempt to perform the modification.
+> [!NOTE]
+> The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly in a Docker Container.
 
-If the modification fails, you will see the following error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
+> [!TIP]
+> Docker Compose will automatically run a [command](https://github.com/rcrderby/crg-container/blob/b4dc02507373b9e534d72d6df469929dcd5ebe49/docker-compose.yml#L24-L27 "Docker Compose Command") to perform the necessary modification.
+
+> [!WARNING]
+> If the modification fails, you will see the following error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
 
 <details>
   <summary>
