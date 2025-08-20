@@ -191,7 +191,9 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
     </details>
 </details>
 
-After downloading a CRG Scoreboard release, confirm your file system has a folder with the prefix `crg-scoreboard_` folder *within* a folder named `crg-container`:
+> [!IMPORTANT]
+> After downloading a CRG Scoreboard release, confirm your file system has a folder with the prefix `crg-scoreboard_` folder *within* a folder named `crg-container`.
+> In the example below, note that the `crg-scoreboard_v2025.6` folder is within the `crg-container` folder:
 
 <details open>
   <summary>
@@ -232,9 +234,6 @@ After downloading a CRG Scoreboard release, confirm your file system has a folde
   ```
 
 </details>
-
-> [!IMPORTANT]
-> Note that the `crg-scoreboard_v2025.6` folder is within the `crg-container` folder:
 
 ---
 
@@ -583,7 +582,7 @@ The modification tells CRG to run without launching a separate Java window to di
 
 You may manually perform the following steps to update the script and resolve the error:
 
-1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#download-and-extract-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
+1. Locate and open the folder with the prefix `crg-scoreboard_` that you created in [this step](#download-and-extract-or-clone-a-release-of-crg-scoreboard "Download and Extract a Release of CRG Scoreboard").
 2. Locate and open the file `scoreboard.sh` in any text editor application (Notepad, TextEdit, VIM, etc.).
 3. Adjust the line of text that reads `GUI="--gui"` as follows:
 
