@@ -32,7 +32,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 2. Download the appropriate Docker Desktop release for your OS [^4].
 3. Follow the OS-specific instructions to install Docker Desktop on your computer.
 
-    <details>
+    <details open>
       <summary>
         Docker Installation Instructions:
       </summary>
@@ -49,7 +49,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Terminal window to verify the Docker Engine is available.
 
-<details>
+<details open>
   <summary>
     Enter this command to confirm the Docker Engine is active:
   </summary>
@@ -60,7 +60,7 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 </details>
 
-<details>
+<details open>
   <summary>
     Confirm the response from the Docker Engine looks something like this:
   </summary>
@@ -537,12 +537,12 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 > [!NOTE]
 > The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly in a Docker Container.
 
-<details>
+<details open>
   <summary>
   CRG Java GUI error in Docker Compose example:
   </summary>
 
-  ```shell{5}
+  ```shell
   crg-container-1  | Exception in thread "main" java.lang.reflect.InvocationTargetException
   crg-container-1  |  at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
   crg-container-1  |  at java.base/java.lang.reflect.Method.invoke(Method.java:577)
