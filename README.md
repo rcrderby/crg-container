@@ -50,7 +50,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Terminal window to verify the Docker Engine is available.
 
 <details>
-  <summary>
+  <summary open>
     :heavy_plus_sign: Enter this command to confirm the Docker Engine is active:
   </summary>
 
@@ -83,7 +83,9 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
   </summary>
 
 1. Navigate to the [CRG Container Releases](https://github.com/rcrderby/crg-container/releases "CRG Container Releases") page.
+
 2. Locate the `Assets` section of the page to find the latest release and click on `Source code (zip)` or `Source code (tar.gz)` to download a compressed copy of the repository files.
+
 3. Extract the compressed file to create a folder named `crg-container` that contains the CRG Container repository files.
   
 </details>
@@ -110,7 +112,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 3. Review the `git clone` command response output (optional):
 
-    <details open>
+    <details>
       <summary>
         :heavy_plus_sign: Git clone command response output example:
       </summary>
@@ -139,8 +141,11 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
   </summary>
 
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
+
 2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_` (e.g., `crg-scoreboard_v2025.6.zip`).
+
 3. Move the downloaded `.zip` file with the prefix `crg-scoreboard_` to the extracted or cloned `crg-container` folder on your computer.
+
 4. Extract the `.zip` file with the prefix `crg-scoreboard_` to create a folder with the prefix `crg-scoreboard_` that contains the CRG Scoreboard repository files.
 
 </details>
@@ -167,7 +172,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 3. Review the `git clone` command response output (optional):
 
-    <details open>
+    <details>
       <summary>
         :heavy_plus_sign: Git clone command response output example:
       </summary>
@@ -192,40 +197,41 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
         :heavy_plus_sign: Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
       </summary>
 
-    - Note the `crg-scoreboard_v2025.6` folder within the `crg-container` folder:
+    > [!NOTE]
+    > Note that the `crg-scoreboard_v2025.6` folder is within the `crg-container` folder:
 
-        ```shell
-        ├── crg-container
-        │   ├── .devcontainer
-        │   ├── .dockerignore
-        │   ├── .git
-        │   ├── .github
-        │   ├── .gitignore
-        │   ├── .vscode
-        │   ├── Dockerfile
-        │   ├── Dockerfile.dev
-        │   ├── LICENSE
-        │   ├── README.md
-        │   ├── crg-scoreboard_v2025.6
-        │   │   ├── COPYING
-        │   │   ├── COPYING-AL
-        │   │   ├── COPYING-GPL
-        │   │   ├── LICENSES
-        │   │   ├── NOTICE
-        │   │   ├── README.md
-        │   │   ├── blank_statsbook.xlsx
-        │   │   ├── config
-        │   │   ├── html
-        │   │   ├── lib
-        │   │   ├── logs
-        │   │   ├── scoreboard-Windows.exe
-        │   │   ├── scoreboard-mac.command
-        │   │   ├── scoreboard.sh
-        │   │   └── start.html
-        │   ├── crg-scoreboard_v2025.6.zip
-        │   ├── docker-compose.yml
-        │   └── requirements
-        ```
+      ```shell
+      ├── crg-container
+      │   ├── .devcontainer
+      │   ├── .dockerignore
+      │   ├── .git
+      │   ├── .github
+      │   ├── .gitignore
+      │   ├── .vscode
+      │   ├── Dockerfile
+      │   ├── Dockerfile.dev
+      │   ├── LICENSE
+      │   ├── README.md
+      │   ├── crg-scoreboard_v2025.6
+      │   │   ├── COPYING
+      │   │   ├── COPYING-AL
+      │   │   ├── COPYING-GPL
+      │   │   ├── LICENSES
+      │   │   ├── NOTICE
+      │   │   ├── README.md
+      │   │   ├── blank_statsbook.xlsx
+      │   │   ├── config
+      │   │   ├── html
+      │   │   ├── lib
+      │   │   ├── logs
+      │   │   ├── scoreboard-Windows.exe
+      │   │   ├── scoreboard-mac.command
+      │   │   ├── scoreboard.sh
+      │   │   └── start.html
+      │   ├── crg-scoreboard_v2025.6.zip
+      │   ├── docker-compose.yml
+      │   └── requirements
+      ```
 
     </details>
 </details>
@@ -537,8 +543,28 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 > [!NOTE]
 > The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly in a Docker Container.
 
+The modification tells CRG to run without launching a separate Java window to display program output, which isn't supported in the Docker Container.
+
+> [!TIP]
+> Docker Compose will **automatically** run a [command](https://github.com/rcrderby/crg-container/blob/b4dc02507373b9e534d72d6df469929dcd5ebe49/docker-compose.yml#L24-L27 "Docker Compose Command") to perform the necessary modification.
+
 <details>
   <summary>
+  :heavy_plus_sign: Docker Compose Command that modifies the CRG launch script:
+  </summary>
+
+  ```shell
+  /bin/bash -c "sed -i -e 's/^GUI/#\ GUI/' ./scoreboard.sh
+          && ./scoreboard.sh"
+  ```
+
+</details>
+
+> [!WARNING]
+> If the modification fails, you will see an error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
+
+<details>
+  <summary open>
   :heavy_plus_sign: CRG Java GUI error in Docker Compose example:
   </summary>
 
@@ -554,24 +580,6 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
   ```
 
 </details>
-
-> [!TIP]
-> Docker Compose will automatically run a [command](https://github.com/rcrderby/crg-container/blob/b4dc02507373b9e534d72d6df469929dcd5ebe49/docker-compose.yml#L24-L27 "Docker Compose Command") to perform the necessary modification.
-
-<details>
-  <summary>
-  :heavy_plus_sign: CRG Java GUI error in Docker Compose example:
-  </summary>
-
-  ```shell
-  /bin/bash -c "sed -i -e 's/^GUI/#\ GUI/' ./scoreboard.sh
-          && ./scoreboard.sh"
-  ```
-
-</details>
-
-> [!WARNING]
-> If the modification fails, you will see the following error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
 
 You may manually perform the following steps to update the script and resolve the error:
 
