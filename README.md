@@ -79,7 +79,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
+    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release.
   </summary>
 
 1. Navigate to the [CRG Container Releases](https://github.com/rcrderby/crg-container/releases "CRG Container Releases") page.
@@ -92,7 +92,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    :heavy_plus_sign: Option 2 - Clone the repository with Git:
+    :heavy_plus_sign: Option 2 - Clone the repository with Git.
   </summary>
 
 1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git [^5] commands.
@@ -137,7 +137,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
+    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release.
   </summary>
 
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
@@ -152,7 +152,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    :heavy_plus_sign: Option 2 - Clone the repository with Git:
+    :heavy_plus_sign: Option 2 - Clone the repository with Git.
   </summary>
 
 1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git commands.
@@ -190,6 +190,8 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
     </details>
 </details>
+
+---
 
 > [!IMPORTANT]
 > After downloading a CRG Scoreboard release, confirm your file system has a folder with the prefix `crg-scoreboard_` folder *within* a folder named `crg-container`.
