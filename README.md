@@ -49,8 +49,8 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Terminal window to verify the Docker Engine is available.
 
-<details>
-  <summary open>
+<details open>
+  <summary>
     :heavy_plus_sign: Enter this command to confirm the Docker Engine is active:
   </summary>
 
