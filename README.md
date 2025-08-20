@@ -537,18 +537,12 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 > [!NOTE]
 > The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly in a Docker Container.
 
-> [!TIP]
-> Docker Compose will automatically run a [command](https://github.com/rcrderby/crg-container/blob/b4dc02507373b9e534d72d6df469929dcd5ebe49/docker-compose.yml#L24-L27 "Docker Compose Command") to perform the necessary modification.
-
-> [!WARNING]
-> If the modification fails, you will see the following error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
-
 <details>
   <summary>
   CRG Java GUI error in Docker Compose example:
   </summary>
 
-  ```shell
+  ```shell{5}
   crg-container-1  | Exception in thread "main" java.lang.reflect.InvocationTargetException
   crg-container-1  |  at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
   crg-container-1  |  at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -560,6 +554,13 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
   ```
 
 </details>
+
+> [!TIP]
+> Docker Compose will automatically run a [command](https://github.com/rcrderby/crg-container/blob/b4dc02507373b9e534d72d6df469929dcd5ebe49/docker-compose.yml#L24-L27 "Docker Compose Command") to perform the necessary modification.
+
+> [!WARNING]
+> If the modification fails, you will see the following error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
+
 
 You may manually perform the following steps to update the script and resolve the error:
 
