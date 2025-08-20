@@ -197,43 +197,44 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
         :heavy_plus_sign: Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
       </summary>
 
+      ```shell
+      ├── crg-container
+      │   ├── .devcontainer
+      │   ├── .dockerignore
+      │   ├── .git
+      │   ├── .github
+      │   ├── .gitignore
+      │   ├── .vscode
+      │   ├── Dockerfile
+      │   ├── Dockerfile.dev
+      │   ├── LICENSE
+      │   ├── README.md
+      │   ├── crg-scoreboard_v2025.6
+      │   │   ├── COPYING
+      │   │   ├── COPYING-AL
+      │   │   ├── COPYING-GPL
+      │   │   ├── LICENSES
+      │   │   ├── NOTICE
+      │   │   ├── README.md
+      │   │   ├── blank_statsbook.xlsx
+      │   │   ├── config
+      │   │   ├── html
+      │   │   ├── lib
+      │   │   ├── logs
+      │   │   ├── scoreboard-Windows.exe
+      │   │   ├── scoreboard-mac.command
+      │   │   ├── scoreboard.sh
+      │   │   └── start.html
+      │   ├── crg-scoreboard_v2025.6.zip
+      │   ├── docker-compose.yml
+      │   └── requirements
+      ```
+
+    </details>
+
 > [!NOTE]
 > Note that the `crg-scoreboard_v2025.6` folder is within the `crg-container` folder:
 
-  ```shell
-  ├── crg-container
-  │   ├── .devcontainer
-  │   ├── .dockerignore
-  │   ├── .git
-  │   ├── .github
-  │   ├── .gitignore
-  │   ├── .vscode
-  │   ├── Dockerfile
-  │   ├── Dockerfile.dev
-  │   ├── LICENSE
-  │   ├── README.md
-  │   ├── crg-scoreboard_v2025.6
-  │   │   ├── COPYING
-  │   │   ├── COPYING-AL
-  │   │   ├── COPYING-GPL
-  │   │   ├── LICENSES
-  │   │   ├── NOTICE
-  │   │   ├── README.md
-  │   │   ├── blank_statsbook.xlsx
-  │   │   ├── config
-  │   │   ├── html
-  │   │   ├── lib
-  │   │   ├── logs
-  │   │   ├── scoreboard-Windows.exe
-  │   │   ├── scoreboard-mac.command
-  │   │   ├── scoreboard.sh
-  │   │   └── start.html
-  │   ├── crg-scoreboard_v2025.6.zip
-  │   ├── docker-compose.yml
-  │   └── requirements
-  ```
-
-  </details>
 </details>
 
 ---
