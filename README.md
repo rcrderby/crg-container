@@ -66,7 +66,7 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
   </summary>
 
   ```shell
-  Docker version 26.0.0, build 2ae903e
+  Docker version 28.3.2, build 578ccf6
   ```
 
 </details>
@@ -139,7 +139,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
   </summary>
 
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
-2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_` (e.g., `crg-scoreboard_v2023.5.zip`).
+2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_` (e.g., `crg-scoreboard_v2025.6.zip`).
 3. Move the downloaded `.zip` file with the prefix `crg-scoreboard_` to the extracted or cloned `crg-container` folder on your computer.
 4. Extract the `.zip` file with the prefix `crg-scoreboard_` to create a folder with the prefix `crg-scoreboard_` that contains the CRG Scoreboard repository files.
 
@@ -189,10 +189,10 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
     <details>
       <summary>
-        Example directory structure after downloading and extracting <strong>crg-scoreboard_v2023.5.zip</strong> in the <strong>crg-container</strong> folder:
+        Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
       </summary>
 
-    - Note the `crg-scoreboard_v2023.5` folder within the `crg-container` folder:
+    - Note the `crg-scoreboard_v2025.6` folder within the `crg-container` folder:
 
         ```shell
         ├── crg-container
@@ -206,7 +206,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
         │   ├── Dockerfile.dev
         │   ├── LICENSE
         │   ├── README.md
-        │   ├── crg-scoreboard_v2023.5
+        │   ├── crg-scoreboard_v2025.6
         │   │   ├── COPYING
         │   │   ├── COPYING-AL
         │   │   ├── COPYING-GPL
@@ -222,7 +222,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
         │   │   ├── scoreboard-mac.command
         │   │   ├── scoreboard.sh
         │   │   └── start.html
-        │   ├── crg-scoreboard_v2023.5.zip
+        │   ├── crg-scoreboard_v2025.6.zip
         │   ├── docker-compose.yml
         │   └── requirements
         ```
@@ -251,8 +251,8 @@ The Docker and Docker Compose configuration uses environment variables to make t
     CRG_SOURCE_VOLUME=.
 
     # Local path relative to CRG_SOURCE_VOLUME for the extracted CRG application
-    ## Default value is CRG version 2023.6
-    CRG_SOURCE_DIR=crg-scoreboard_v2023.6
+    ## Default value is CRG version 2025.6
+    CRG_SOURCE_DIR=crg-scoreboard_v2025.6
 
     # Name of the folder to create and mount files to on the CRG container instance
     ## Default value is 'crg-container'
@@ -317,8 +317,8 @@ You are ready to launch CRG in a Docker Container with Docker Compose.
       ⠋ Container crg-container-crg-container-1  Created                                                                     0.0s 
       Attaching to crg-container-1
       crg-container-1  | Found existing autosave dir - skipping import
-      crg-container-1  | CRG ScoreBoard version v2023.4
-      crg-container-1  | 2024-05-03 01:32:23.293:INFO::main: Logging initialized @482ms to org.eclipse.jetty.util.log.StdErrLog
+      crg-container-1  | CRG ScoreBoard version v2025.6
+      crg-container-1  | 2025-08-20 13:32:23.293:INFO::main: Logging initialized @482ms to org.eclipse.jetty.util.log.StdErrLog
       crg-container-1  | Loaded auto-saved scoreboard from ./config/autosave/scoreboard-0-secs-ago.json
       crg-container-1  | 
       crg-container-1  | vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -377,10 +377,10 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
   "FailingStreak": 0,
   "Log": [
     {
-      "Start": "2024-05-03T12:00:00.000000000Z",
-      "End": "2024-05-03T12:00:00.000000000",
+      "Start": "2025-08-20T12:00:00.000000000Z",
+      "End": "2025-08-20T12:00:00.000000000",
       "ExitCode": 0,
-      "Output": "HTTP/1.1 200 OK\r\nDate: Fri, 03 May 2024 01:50:54 GMT\r\nSet-Cookie: CRG_SCOREBOARD=node0v5ap3t21va5cq5zx2cqaekfe36.node0; Path=/; Expires=Sat, 18-May-2024 12:00:00 GMT; Max-Age=1296000; HttpOnly; SameSite=Lax\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\nLast-Modified: Tue, 03 Oct 2023 00:56:04 GMT\r\nContent-Type: text/html;charset=utf-8\r\nAccept-Ranges: bytes\r\n"
+      "Output": "HTTP/1.1 200 OK\r\nDate: Wed, 20 August 2025 01:50:54 GMT\r\nSet-Cookie: CRG_SCOREBOARD=node0v5ap3t21va5cq5zx2cqaekfe36.node0; Path=/; Expires=Thu, 21-Aug-2025 12:00:00 GMT; Max-Age=1296000; HttpOnly; SameSite=Lax\r\nExpires: Thu, 01 Jan 1970 00:00:00 GMT\r\nLast-Modified: Tue, 03 Oct 2023 00:56:04 GMT\r\nContent-Type: text/html;charset=utf-8\r\nAccept-Ranges: bytes\r\n"
     }
   ]
 }
