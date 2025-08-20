@@ -32,9 +32,9 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 2. Download the appropriate Docker Desktop release for your OS [^4].
 3. Follow the OS-specific instructions to install Docker Desktop on your computer.
 
-    <details open ➕>
+    <details open>
       <summary>
-        Docker Installation Instructions:
+        ➕ Docker Installation Instructions: :heavy_plus_sign:
       </summary>
 
       - [Windows](https://docs.docker.com/desktop/install/windows-install "Docker Desktop for Windows Installation Guide")
