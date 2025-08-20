@@ -34,7 +34,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
     <details open>
       <summary>
-        ➕ Docker Installation Instructions: :heavy_plus_sign:
+       :heavy_plus_sign: Docker Installation Instructions:
       </summary>
 
       - [Windows](https://docs.docker.com/desktop/install/windows-install "Docker Desktop for Windows Installation Guide")
@@ -49,9 +49,9 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 
 After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Terminal window to verify the Docker Engine is available.
 
-<details open>
+<details>
   <summary>
-    Enter this command to confirm the Docker Engine is active:
+    :heavy_plus_sign: Enter this command to confirm the Docker Engine is active:
   </summary>
 
   ```shell
@@ -62,7 +62,7 @@ After installing Docker Desktop, open a Windows PowerShell or macOS/Linux Termin
 
 <details open>
   <summary>
-    Confirm the response from the Docker Engine looks something like this:
+    :heavy_plus_sign: Confirm the response from the Docker Engine looks something like this:
   </summary>
 
   ```shell
@@ -79,7 +79,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
+    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
   </summary>
 
 1. Navigate to the [CRG Container Releases](https://github.com/rcrderby/crg-container/releases "CRG Container Releases") page.
@@ -90,16 +90,16 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    Option 2 - Clone the repository with Git:
+    :heavy_plus_sign: Option 2 - Clone the repository with Git:
   </summary>
 
 1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git [^5] commands.
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder named `crg-container`.
 
-    <details>
+    <details open>
       <summary>
-        Git clone command:
+        :heavy_plus_sign: Git clone command:
       </summary>
 
     ```shell
@@ -110,9 +110,9 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 3. Review the `git clone` command response output (optional):
 
-    <details>
+    <details open>
       <summary>
-        Git clone command response output example:
+        :heavy_plus_sign: Git clone command response output example:
       </summary>
 
     ```shell
@@ -135,7 +135,7 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
+    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release:
   </summary>
 
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
@@ -147,16 +147,16 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 <details>
   <summary>
-    Option 2 - Clone the repository with Git:
+    :heavy_plus_sign: Option 2 - Clone the repository with Git:
   </summary>
 
 1. Open your preferred terminal application (Terminal, Git Bash, Windows PowerShell, etc.) to run Git commands.
 
 2. Use the `git clone` command to fetch the repository files and place them within a new folder with the prefix `crg-scoreboard_`.
 
-    <details>
+    <details open>
       <summary>
-        Git clone command:
+        :heavy_plus_sign: Git clone command:
       </summary>
 
     ```shell
@@ -167,9 +167,9 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 3. Review the `git clone` command response output (optional):
 
-    <details>
+    <details open>
       <summary>
-        Git clone command response output example:
+        :heavy_plus_sign: Git clone command response output example:
       </summary>
 
     ```shell
@@ -187,9 +187,9 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 4. Confirm your file system has a folder with the prefix `crg-scoreboard_` folder within a folder named `crg-container`:
 
-    <details>
+    <details open>
       <summary>
-        Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
+        :heavy_plus_sign: Example directory structure after downloading and extracting <strong>crg-scoreboard_v2025.6.zip</strong> in the <strong>crg-container</strong> folder:
       </summary>
 
     - Note the `crg-scoreboard_v2025.6` folder within the `crg-container` folder:
@@ -240,9 +240,9 @@ The Docker and Docker Compose configuration uses environment variables to make t
 2. Open the `.env` file in a text editor (Notepad, TextEdit, VIM, etc.).
 3. Copy the following text and paste it in the `.env` file:
 
-    <details>
+    <details open>
       <summary>
-        Default environment variables template:
+        :heavy_plus_sign: Default environment variables template:
       </summary>
 
     ```shell
@@ -280,9 +280,9 @@ You are ready to launch CRG in a Docker Container with Docker Compose.
 
 3. Use Docker Compose to start the CRG Container:
 
-    <details>
+    <details open >
       <summary>
-        Docker Compose command input:
+        :heavy_plus_sign: Docker Compose command input:
       </summary>
 
     ```shell
@@ -293,9 +293,9 @@ You are ready to launch CRG in a Docker Container with Docker Compose.
 
 4. Review the Docker Compose output:
 
-    <details>
+    <details open>
       <summary>
-        Successful Docker Compose command output example:
+        :heavy_plus_sign: Successful Docker Compose command output example:
       </summary>
 
     ```shell
@@ -344,7 +344,7 @@ You may optionally check or monitor the status of the CRG container running in D
 
 <details>
   <summary>
-    Overview:
+    :heavy_plus_sign: Overview:
   </summary>
 
 The health check is a recurring `curl` HTTP request to the CRG web application server, and a `200 OK` response indicates the request is successful.  The health check configuration is available for review in the [`docker-compose.yml`](./docker-compose.yml "Docker Compose Health Check") file.
@@ -353,7 +353,7 @@ The health check is a recurring `curl` HTTP request to the CRG web application s
 
 <details>
   <summary>
-    Health check command input:
+    :heavy_plus_sign: Health check command input:
   </summary>
 
 You may manually check the status of the CRG container with the following command:
@@ -367,7 +367,7 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 
 <details>
   <summary>
-    Successful health check command output example:
+    :heavy_plus_sign: Successful health check command output example:
   </summary>
 
 ```jsonc
@@ -406,9 +406,9 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 1. Press `Ctrl+C` to stop CRG.
 
-    <details>
+    <details open>
       <summary>
-        Successful stop of the CRG Container in Docker Compose output example:
+        :heavy_plus_sign: Successful stop of the CRG Container in Docker Compose output example:
       </summary>
 
     ```shell
@@ -423,18 +423,18 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 2. Stop and remove the CRG Container and Docker Network.
 
-    <details>
+    <details open>
       <summary>
-        Docker Compose command input:
+        :heavy_plus_sign: Docker Compose command input:
       </summary>
 
     ```shell
     docker compose down
     ```
 
-    <details>
+    <details open>
       <summary>
-        Successful Docker Compose command output example:
+        :heavy_plus_sign: Successful Docker Compose command output example:
       </summary>
 
     ```shell
@@ -449,7 +449,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
 <details>
   <summary>
-    How do I access the CRG container from another computer or tablet over a network?
+    :heavy_plus_sign: How do I access the CRG container from another computer or tablet over a network?
   </summary>
 
 - A nuance of running Docker within a Container is that the IP address in the URL on the CRG Scoreboard main page (e.g., `http://172.19.0.2:8000`) is *not* the IP address of your computer; it is the private IP address of the container, and that URL is *not* directly accessible from another computer, tablet, etc.
@@ -459,7 +459,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
       <details>
         <summary>
-        Get IP address command example:
+        :heavy_plus_sign: Get IP address command example:
         </summary>
 
       ```shell
@@ -470,7 +470,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
   
       <details>
         <summary>
-        Get IP address command output example:
+        :heavy_plus_sign: Get IP address command output example:
         </summary>
 
       ```shell
@@ -486,7 +486,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
       <details>
         <summary>
-        Get IP address command example:
+        :heavy_plus_sign: Get IP address command example:
         </summary>
 
       ```powershell
@@ -501,7 +501,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
       <details>
         <summary>
-        Get IP address command output example:
+        :heavy_plus_sign: Get IP address command output example:
         </summary>
 
       ```powershell
@@ -518,7 +518,7 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 
       <details>
         <summary>
-        URL with your computer's IP address example:
+        :heavy_plus_sign: URL with your computer's IP address example:
         </summary>
 
       ```text
@@ -537,9 +537,9 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 > [!NOTE]
 > The script that launches CRG ([`scoreboard.sh`](https://github.com/rollerderby/scoreboard/blob/dev/scoreboard.sh "scoreboard.sh Source File")) requires a modification to work correctly in a Docker Container.
 
-<details open>
+<details>
   <summary>
-  CRG Java GUI error in Docker Compose example:
+  :heavy_plus_sign: CRG Java GUI error in Docker Compose example:
   </summary>
 
   ```shell
@@ -558,9 +558,20 @@ You may stop the instance of CRG running in Docker Compose anytime, and your con
 > [!TIP]
 > Docker Compose will automatically run a [command](https://github.com/rcrderby/crg-container/blob/b4dc02507373b9e534d72d6df469929dcd5ebe49/docker-compose.yml#L24-L27 "Docker Compose Command") to perform the necessary modification.
 
+<details>
+  <summary>
+  :heavy_plus_sign: CRG Java GUI error in Docker Compose example:
+  </summary>
+
+  ```shell
+  /bin/bash -c "sed -i -e 's/^GUI/#\ GUI/' ./scoreboard.sh
+          && ./scoreboard.sh"
+  ```
+
+</details>
+
 > [!WARNING]
 > If the modification fails, you will see the following error when you [launch the Container with Docker Compose](#launch-the-crg-container-with-docker-compose "Docker Compose Launch Instructions"):
-
 
 You may manually perform the following steps to update the script and resolve the error:
 
@@ -570,7 +581,7 @@ You may manually perform the following steps to update the script and resolve th
 
     <details>
       <summary>
-        Prefix the line that sets the 'GUI' variable with a comment character:
+        :heavy_plus_sign: Prefix the line that sets the 'GUI' variable with a comment character:
       </summary>
 
       ```shell
