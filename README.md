@@ -133,11 +133,11 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 ### Download and Extract or Clone a Release of CRG Scoreboard
 
-[CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository contains the files the run the CRG Scoreboard software.  You need to download a copy of the repository files to your computer running Docker Desktop.
+The [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository contains the files that run the CRG Scoreboard software.  You need to download a copy of the repository files to your computer running Docker Desktop.
 
 <details>
   <summary>
-    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release.
+    :heavy_plus_sign: Option 1 - Download and extract a <strong>CRG Scoreboard</strong> release.
   </summary>
 
 1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
