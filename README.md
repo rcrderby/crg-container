@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository provides a mechanism to run the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository") application for Roller Derby in a Docker Container [^1], using Docker Compose [^2] to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
+This repository provides a mechanism to run the [CRG Scoreboard](https://github.com/rollerderby/scoreboard "CRG Scoreboard Git Repository") application for Roller Derby in a Docker Container [^1], using Docker Compose [^2] to automate the deployment and launch of CRG.  Why run CRG in a Docker Container?
 
 - Consistency:
   - There is no need to install a JRE [^3] on your computer; it's built into the Container.
@@ -22,7 +22,7 @@ This repository provides a mechanism to run the [CRG ScoreBoard](https://github.
 1. Computer running Windows, macOS, or Linux.
 2. Installation of [Docker Desktop](https://docs.docker.com/desktop "Docker Desktop Overview").
 3. Release of the [CRG Container](./ "CRG Container GitHub Repository") GitHub repository.
-4. Release of the [CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository.
+4. Release of the [CRG Scoreboard](https://github.com/rollerderby/scoreboard "CRG Scoreboard GitHub Repository") GitHub repository.
 
 ## Setup Instructions
 
@@ -133,14 +133,14 @@ The [CRG Container](./ "CRG Container GitHub Repository") Git repository contain
 
 ### Download and Extract or Clone a Release of CRG Scoreboard
 
-[CRG ScoreBoard](https://github.com/rollerderby/scoreboard "CRG ScoreBoard GitHub Repository") GitHub repository contains the files the run the CRG Scoreboard software.  You need to download a copy of the repository files to your computer running Docker Desktop.
+The [CRG Scoreboard](https://github.com/rollerderby/scoreboard "CRG Scoreboard GitHub Repository") GitHub repository contains the files that run the CRG Scoreboard software.  You need to download a copy of the repository files to your computer running Docker Desktop.
 
 <details>
   <summary>
-    :heavy_plus_sign: Option 1 - Download and extract the latest <strong>CRG Container</strong> release.
+    :heavy_plus_sign: Option 1 - Download and extract a <strong>CRG Scoreboard</strong> release.
   </summary>
 
-1. Navigate to the [CRG ScoreBoard Releases](https://github.com/rollerderby/scoreboard/releases "CRG ScoreBoard Releases") page.
+1. Navigate to the [CRG Scoreboard Releases](https://github.com/rollerderby/scoreboard/releases "CRG Scoreboard Releases") page.
 
 2. Locate the `Assets` section for the latest release and click on the `.zip` file with the prefix `crg-scoreboard_` (e.g., `crg-scoreboard_v2025.6.zip`).
 
@@ -401,9 +401,9 @@ docker inspect -f "{{ json .State.Health }}" $(docker ps -lq)
 
 CRG should now be running in a Docker Container, and you may access the CRG interface with a web browser.
 
-1. Open a [recommended web browser application](https://github.com/rollerderby/scoreboard#web-browser "CRG ScoreBoard Documentation Browser Recommendation").
+1. Open a [recommended web browser application](https://github.com/rollerderby/scoreboard#web-browser "CRG Scoreboard Documentation Browser Recommendation").
 2. Navigate to [http://localhost:8000](http://localhost:8000 "CRG Application Launch Page").
-3. Run the CRG application in accordance with the [CRG ScoreBoard documentation](https://github.com/rollerderby/scoreboard/wiki "CRG ScoreBoard Documentation").
+3. Run the CRG application in accordance with the [CRG Scoreboard documentation](https://github.com/rollerderby/scoreboard/wiki "CRG Scoreboard Documentation").
 
 ---
 
@@ -619,7 +619,7 @@ You may manually perform the following steps to update the script and resolve th
 
 ## References
 
-- [CRG ScoreBoard Git Repository](https://github.com/rollerderby/scoreboard "CRG ScoreBoard Git Repository")
+- [CRG Scoreboard Git Repository](https://github.com/rollerderby/scoreboard "CRG Scoreboard Git Repository")
 - [Docker Compose documentation](https://docs.docker.com/compose "Docker Compose Documentation")
 
 [^1]: [What is a Docker Container?](https://www.docker.com/resources/what-container "What is a Docker Container?")
