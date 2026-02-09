@@ -51,7 +51,7 @@ overrides:
 
   # JSON files
   - files:
-      - "*.json"
+      - "**/*.json"
     extends:
       - plugin:jsonc/recommended-with-json
     parser: jsonc-eslint-parser
