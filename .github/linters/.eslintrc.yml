@@ -56,7 +56,7 @@ overrides:
       - plugin:jsonc/recommended-with-json
     parser: jsonc-eslint-parser
     parserOptions:
-      jsonSyntax: JSONC
+      jsonSyntax: JSON
     rules: {
       "jsonc/no-comments": "off"
     }
