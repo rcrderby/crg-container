@@ -38,6 +38,7 @@ parserOptions:
 ###########
 plugins:
   - '@typescript-eslint'
+  - 'jsonc'
 
 #########
 # Rules #
