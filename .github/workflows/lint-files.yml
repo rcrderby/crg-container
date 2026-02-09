@@ -50,3 +50,5 @@ jobs:
           VALIDATE_YAML: true
           # Language-specific configuration
           YAML_ERROR_ON_WARNING: true
+          # Other Variables
+          FILTER_REGEX_EXCLUDE: '.*devcontainer\.json$'
