@@ -1,7 +1,7 @@
 # Dockerfile for CRG Container
 
 # Base image
-FROM openjdk:latest
+FROM openjdk:27-rc-oracle
 
 # Metadata
 LABEL author-derby-name="Breadpool"
